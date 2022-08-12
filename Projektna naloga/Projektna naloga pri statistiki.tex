@@ -69,12 +69,15 @@
 		V tej projektni nalogi pri predmetu Statistika, bom obravnaval tri naloge po navodilih. Vsaka naloga bo obravnavana v svojem lastnem poglavju. Da bo se lažje sklicevati na njih, bo prva naloga poimenovana \pojem{Kibergrad}, druga \pojem{Slučajni sprehod} in tretja \pojem{Temperature}.
 	\end{abstract}
 	\newpage
-	\section{Kibergrad}
+	\tableofcontents
+	\newpage
+	\section{Kibergrad}\label{sect: Kibergrad}
 	Priložena datoteka \textit{Kibergrad.csv}, ki vsebuje podatke o dani populaciji (prebivalci mesta Kibergrad), je bila odprta v programu LibreOffice Calc. S pomočjo vgrajenega orodja so nato, bili zbrani vzorci velikosti $500$ po postopku enostavnega vzorčenja. V priloženi datoteki \textit{Kibergradwork.ods} so na prvi strani izpisani vsi podatki ter vseh pet pridobljenih vzorcev, na drugi strani je posebej obravnavan prvi vzorec v smislu kvartilov in extremnih vrednosti, na tretji strani pa se na enak način obravnavajo vsi vzorci glede na dohodek družin tipa $1$. Obe primerjavi sta dodatno podprti s pomočjo škatel z brki in na koncu sta izračunani še s tipi pojasnjena varianca in nepojasnjena varianca dohodkov. Pri tem je v veliko pomoč programski jezik R.
 	
-	\subsection{Primerjava dohodkov med tipi družin prvega vzorca}
+	\subsection{Primerjava dohodkov med tipi družin prvega vzorca} \label{subsect: 1A}
 	Poglejmo si najprej prvi vzorec in primerjajmo dohodke družin glede na tip družine. V delovnem okolju jezika $\textbf{R}$ odpremo in poženemo skripto \textit{Kibergrad\_a.R}. Ob pogonu se v konzoli izpišejo vrednosti o dohodku, ki so navedene v spodnji tabeli.
 	\begin{table}[h!]
+		\label{tab: quartA}
 		\centering
 		\begin{tabular}{|l|c|c|c|}
 			\hline
@@ -91,6 +94,7 @@
 	Istočasno skripta izriše vzporedne škatle z brki, kot lahko vidimo na spodnji sliki, s pomočjo katerih lahko grafično primerjamo dohodke družin različnih tipov.
 	
 	\begin{figure}[h!]
+		\label{fig: boxplotA}
 		\centering
 		\includegraphics[scale = 0.35]{TabelaSample1}
 		\caption{Vzporedno narisane škatle z brki tipov družin $1$, $2$ in $3$}
@@ -101,13 +105,15 @@
 	Vrednosti so hkrati tudi dostopne v spodnji tabeli. 
 
 	\begin{table}[h!]
+		\label{tab: MeanSDA}
 		\centering
 		\begin{tabular}{|l|c|c|c|}
 			\hline
 			Tip & $1$ & $2$ & $3$ \\ \hline
 			Povprečje & $41655$ & $46301$ & $39931$ \\ \hline
+			SD & $32974{,}23$ & $39500{,}3$ & $31069{,}71$ \\ \hline
 		\end{tabular}
-	\caption{Povprečne vrednosti dohodkov po tipih}
+	\caption{Povprečne vrednosti in standardni odkloni dohodkov po tipih}
 	\end{table}
 
 	Če ne bi imeli že izračunanih povprečij, bi lahko še vedno sklepali o njihovih velikostih s pomoćjo škatel z brki. Opazimo namreč, da se prvi kvartili nahajajo na približno enaki višini z maksimalno razliko v okolici $6000$ v prid družinam tipa $2$, kar velja tudi za mediane. Šele pri tretjem kvartilu ostala dva tipa premagata tip $2$, a tudi tu je največja razlika v rangu $4000$. V tem primeru tipu $2$ pomaga to, da ima izmed vseh tipov družin najmanjšo razdaljo med tretjim kvartilom in mediano, kar pomeni, da so vrednosti, ki pripadajo temu intervalu, bolj gosto porazdeljene.
@@ -116,6 +122,7 @@
 
 	Družine tipa $3$ se odlikujejo po tem, da imajo najširši interkvartilni razmik. Za lažji pregled in primerjavo, so vsi interkvartilni razmiki navedeni v konzoli (po pogonu skripte) ter v tabeli spodaj:
 	\begin{table}[h!]
+		\label{tab: IQRA}
 		\centering
 		\begin{tabular}{|l|c|c|c|}
 			\hline
@@ -127,7 +134,7 @@
 
 	Družine tipa $2$ so torej v povprečju bolj premožne od družin ostalih tipov in družine tipa $3$ so v povprečju najmanj premožne. Vrednosti družin tipa $3$ so hkrati tudi najbolj razpršene v >>srednji polovici<<, kar nam pove velikost interkvartilnega razmika. Družine tipa $1$ se v obeh primerih nahajajo v sredini med družinami tipa $2$ in $3$. Hkrati imajo tudi razmeroma več osamelcev od ostalih tipov. V vsakem primeru nam rezultati namigujejo, da obstaja povezava med tipom družine in njenim dohodkom.
 	\newpage
-	\subsection{Primerjava dohodkov družin tipa $1$ v petih vzorcih}
+	\subsection{Primerjava dohodkov družin tipa $1$ v petih vzorcih}\label{subsect: 1B}
 	Da nadaljujemo analizo podatkov si oglejmo porazdelitev dohodkov družin nekega tipa preko 5 neodvisno izbranih vzorcev. Pri tem za prvega vzamemo kar vzorec, ki smo ga obravnavali v prejšnjem podpoglavju, ostale štiri pa pridobimo s pomočjo orodij v LibreOffice Calc. Vsi vzorci so posebej shranjeni v lastni datoteki tipa \textit{.csv} z imeni tipa \textit{KibergradVzorec$\#$.csv}.
 
 	Da izrišemo škatle z brki, s pomočjo katerih bomo primerjali dohodke preko vzorcev, poženemo skripto \textit{Kibergrad\_b.R}. V njej najprej naložimo vzorce, nato vsakemu vzorcu dodamo stolpec vrednosti, ki nam pove kateremu vzorcu pripada dan podatek. Torej vzorcu $1$ dodamo stolpec samih enk, vzorcu $2$ stolpec samih dvojk itd. Te tabele nato združimo v eno samo tabelo, iz nje prefiltriramo družine vseh tipov razen $1$ in nato s pomočjo te nove tabele po enakem postopku kot v prejšnjem podpoglavju primerjamo dohodke družin glede na vzorec.
@@ -135,6 +142,7 @@
 	Dobljene škatle z brki so prikazane spodaj.
 
 	\begin{figure}[h!]
+		\label{fig: boxplotB1}
 		\centering
 		\includegraphics[scale = 0.425]{SkatlezbrkiB}
 		\caption{Vzporedno narisane škatle z brki družin tipa $1$ po vzorcih}
@@ -143,6 +151,7 @@
 	Takoj opazimo, da je prikazan graf razpotegnjen, v glavnem na račun enega osamelca iz tretjega vzorca. Da dobimo bolj pregleden graf, odstranimo vse vrednosti, ki so večje od $250000$ (v resnici je taka zgolj ena). Škatle z brki, ki jih dobimo po tem popravku in so prikazane spodaj, skripta samostojno izriše.
 	\newpage
 	\begin{figure}[h!]
+		\label{fig: boxplotB2}
 		\centering
 		\includegraphics[scale = 0.4]{LepseSkatlezbrkiB}
 		\caption{Popravljene vzporedno narisane škatle z brki družin tipa $1$ po vzorcih}
@@ -153,6 +162,7 @@
 	Vrednosti (kvartili, povprečja, maksimalna in minimalna vrednost, IQR), ki jih skripta izpiše v konzolo, so prikazane v spodnji tabeli:
 	
 	\begin{table}[h!]
+		\label{tab: QuartMeanA}
 		\centering
 		\begin{tabular}{|l|c|c|c|c|c|}
 			\hline
@@ -175,6 +185,7 @@
 	Na tej točki bi želeli preveriti, ali je porazdelitev slučajno normalna. Tako test s primerjalnim kvartilnim grafikonom kot Shapiro-Wilkov test na vzorcu $1$ nam poveta, da to ne drži. V primeru Shapiro-Wilkovega testa, dobimo vrednost $p < 2.2e{-16} < 0.05$, torej porazdelitev ni normalna. To vidimo tudi na primerjanlen kvartilnem grafikonu spodaj. Enak sklep seveda velja tudi za ostale vzorce.
 	
 	\begin{figure}[h!]
+		\label{fig: qqplotB}
 		\centering
 		\includegraphics[scale = 0.5]{QQVzorec1}
 		\caption{Primerjalni kvartilni grafikon dohodkov družin tipa $1$ v vzorcu 1}
@@ -182,10 +193,52 @@
 	
 	Četudi dohodki niso porazdeljeni normalno, so še vedno razmeroma konsistentni preko obravnavanih vzorcev. To je v kontrastu z razlikami in odstopanji, ki smo jih opazili, ko smo v prvem vzorcu primerjali dohodke glede na tip družine. Ta kontrast dodatno potrjuje sklep, da tip družine netrivialno vpliva na dohodek družine. 
 	
-	\subsection{S tipom pojasnjena varianca populacije}
-	Na koncu prejšnjega podpoglavja smo prišli do sklepa, da ima tip družine netrivialen vpliv na dohodek družine. Če to drži ali ne, lahko preverimo z izračunom s tipom družine pojesnjene variance. Čim smo poračunali to, se lahko skličemo na zvezo med varianco in pojasnjeno ter nepojasnjeno varianco ($Var(X) = Pojasnjena_varianca + Nepojasnjena_varianca$)in poračunamo še slednjo.
+	\subsection{S tipom pojasnjena varianca populacije}\label{subsect: 1C}
+	Na koncu prejšnjega podpoglavja smo prišli do sklepa, da ima tip družine netrivialen vpliv na dohodek družine. Če to drži ali ne, lahko preverimo z izračunom s tipom družine pojesnjene variance. Čim smo poračunali to, se lahko skličemo na zvezo med varianco in pojasnjeno ter nepojasnjeno varianco ($Celotna\_varianca = Pojasnjena\_varianca + Nepojasnjena\_varianca$) in poračunamo še slednjo. Vsi računi in primerjave se prikažejo ob pogonu skripte \textit{Kibergrad\_c.R}. 
 	
-	Vsi računi in primerjave se prikažejo ob pogonu skripte \textit{Kibergrad\_c.R}. Predpostavimo, da so dohodki tipov družin $X_i$ medseboj neodvisni. Predpostavko upravičimo z argumentom, da v splošnem dohodek soseda ne vpliva na naš dohodek. Z $n_i$ označimo število družin tipa $i$ ter z $N$ velikost naše populacije. Z $X$ označimo dohodke družin, z $Y$ pa  slučajno spremenljivko tipov družin, ki ima porazdelitev $P(Y = i) = n_i / N$. Z $\bar{X}_i$ še označimo pričakovano vrednost dohodka v družini tipa $i$. Za izračun s tipom pojasnjene variance potem izračunamo po formuli $Var(E\left[X|Y\right]) = 1/(N-1) * \sum_{i = 1}^{3} (\bar{X}_i - \bar{X})^2 * n_i$.
+	Z $n_i$ označimo število družin tipa $i$ ter z $N$ velikost naše populacije. Z $X$ označimo dohodke družin, z $Y$ pa  slučajno spremenljivko tipov družin, ki ima porazdelitev $P(Y = i) = n_i / N$. Predpostavimo, da so dohodki tipov družin $X_i = X_{|Y=i}$ medseboj neodvisni. Predpostavko upravičimo z argumentom, da v splošnem dohodek soseda ne vpliva na naš dohodek. Pomnimo tudi, da je $E\left[X|Y\right]$ neka funkcija spremenljivke $Y$, recimo $\Phi(Y)$.
+	Z $\bar{X}_i$ še označimo pričakovano vrednost dohodka v družini tipa $i$, torej $\bar{X}_i = E\left[X|Y = i\right]$. S tipom pojasnjeno varianco potem izračunamo po formuli: 
+	\begin{align*} \label{eq: explvarC}
+		& Var(E\left[X|Y\right]) = Var(\Phi(Y)) = E\left[(\Phi(Y)- E\left[\Phi(Y)\right])^2\right] =\\ 
+		&= \sum_{i = 1}^{3} (\Phi(Y = i)- E\left[\Phi(Y)\right])^2 * P(Y = i) = 1/N * \sum_{i = 1}^{3} n_i * (E\left[X|Y = i\right] - E\left[E\left[X|Y\right]\right])^2 \\ &= 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - E\left[X\right])^2 = 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - \bar{X})^2
+	\end{align*}
+
+	S pomočjo zgoraj pridobljene formule v \textit{Kibergrad\_c.R} poračunamo pojasnjeno varianco. Nepojasnjeno varianco nato poračunamo kot razliko populacijske variance in pojasnjene variance. Vrednosti skripta izpiše v konzolo, dostopne pa so tudi v spodnji tabeli.
+	
+	\begin{table}[h!]
+		\label{tab: varC}
+		\centering
+		\begin{tabular}{|l|c|}
+			\hline
+			Varianca & $1026385670$ \\ \hline
+			Pojasnjena & $113781162$ \\ \hline
+			Nepojasnjena & $912604508$ \\ \hline
+			SD & $32037{,}2544062437$ \\ \hline
+		\end{tabular}
+		\caption{Populacijska, s tipi pojasnjena in nepojasnjena varianca}
+	\end{table}
+	
+	Opazimo, da je nepojasnjena varianca bistveno višja od pojasnjene variance. Če pogledamo delež, ki ga varianci zavzemata, nam s tipi družin pojasnjena varianca predstavlja le približno $11{,}09\%$. To nam pove, da je tip družine netrivialen faktor pri napovedi dohodka družine, ni pa glavni faktor. To se ujema s tem, kar smo razbrali v prejšnjih podpoglavjih. Že zgolj za družine tipa $1$ v podpoglavju \ref{Subsect: 1B} je bil standardni odklon, torej koren variance, razmeroma visok v vsakem vzorcu. To se ujema s tem, da večino variance pridobimo od faktorjev, ki niso tip družine. Če bi tip družine bil odgovoren za večji delež celotne variance dohodkov, bi bila varianca znotaj tipov manjša.
+	
+	\section{Slučajni sprehod} \label{sect: SlucajniSprehod}
+	
+	\subsection{Cenilka za $\theta$ po metodi največjega verjetja} \label{subsect: 2A}
+	
+	\subsection{Cenilka za $\theta$ po metodi momentov}\label{subsect: 2B}
+	
+	\subsection{Asimptotični $MSE$ cenilk}\label{subsect: 2C}
+	
+	\subsection{Številska ocena prve cenilke} \label{subsect: 2D}
+	
+	\subsection{Številska ocena druge cenilke} \label{subsect: 2E}
+	
+	\subsection{Histogram meritev in grafi gostot cenilk} \label{subsect: 2F}
+	
+	\section{Temperature}\label{sect: Temperature}
+	
+	\subsection{Preizkus modela $A$ znotraj modela $B$}\label{susect: 3A}
+	
+	\subsection{Akikakejeva informacija modelov}\label{subsect: 3B}
 	
 	
 \end{document}

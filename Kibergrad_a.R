@@ -43,6 +43,13 @@ print(IQR1)
 print(IQR2)
 print(IQR3)
 
+#Poračunajmo še standardne odklone
+sd1 <- sd(DohTip1)
+sd2 <- sd(DohTip2)
+sd3 <- sd(DohTip3)
+
+paste(print("Standardni odkloni znotraj tipov so"), print(sd1), print(","), print(sd2), print("in"), print(sd3))
+
 #Sedaj narišemo vzporedne škatle z brki
 
 boxplot(Dohodek~Tip, data = vzorec1, main="Škatle z brki za dohodke družin glede na tip",yaxp = c(0, 250000, 10), xlab = "Tip Družine", ylab = "Dohodek")
