@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.15)  12 AUG 2022 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.15)  14 AUG 2022 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1165,16 +1165,59 @@ File: QQVzorec1.jpg Graphic file (type jpg)
 Package pdftex.def Info: QQVzorec1.jpg  used on input line 190.
 (pdftex.def)             Requested size: 251.06235pt x 251.43875pt.
  [8 <./QQVzorec1.jpg>]
-Overfull \hbox (38.10658pt too wide) detected at line 204
-[]
+Overfull \hbox (18.8404pt too wide) in paragraph at lines 225--225
+\T1/lmr/m/n/10 vani v da-to-te-kah \T1/lmr/m/it/10 Kro-ma-tin_kratki.csv\T1/lmr
+/m/n/10 , \T1/lmr/m/it/10 Kro-ma-tin_srednji.csv \T1/lmr/m/n/10 in \T1/lmr/m/it
+/10 Kro-ma-tin_dolgi.csv\T1/lmr/m/n/10 .
+ []
+
+[9]
+Overfull \hbox (9.35571pt too wide) detected at line 245
+[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 \OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 x[]; []
+ ; x[]\OT1/lmr/m/n/10 ) = [] [][] \OMS/lmsy/m/n/10   [][] \OT1/lmr/m/n/10 = [] 
+[][] \OMS/lmsy/m/n/10   [][] \OT1/lmr/m/n/10 = [] [][][] \OMS/lmsy/m/n/10   [][
+]
+ []
+
+[10] [11]
+Overfull \hbox (21.47913pt too wide) detected at line 282
+\OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [[]] = [][] \OML/lmm/m/it/10 u[][]e[]\OT1/lmr
+/m/n/10 2\OML/lmm/m/it/10 [] du \OT1/lmr/m/n/10 = [] [][] \OML/lmm/m/it/10 u[]
+e[] du \OT1/lmr/m/n/10 = [][]
  []
 
 
-LaTeX Warning: Reference `Subsect: 1B' on page 9 undefined on input line 221.
+Overfull \hbox (5.47542pt too wide) in paragraph at lines 297--298
+[]\T1/lmr/m/n/10 Od tod lahko ºe skle-pamo, da je $[]$ ne-pri-stran-ska ce-nilk
+a. Sledi, da je $\OML/lmm/m/it/10 MSE\OT1/lmr/m/n/10 ([]) =
+ []
 
-[9] [10] (Projektna naloga pri statistiki.aux)
+[12]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+45.
+ (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+[]\T1/lmr/m/it/10 Rayleighjeva po-raz-de-li-tev\T1/lmr/m/n/10 , v: Wi-ki-pe-dia
+, Pro-sta en-ci-klo-pe-dija,
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 345--346
+\T1/lmr/m/n/10 [ogled $\OT1/lmr/m/n/10 14$\T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 7$\
+T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 2022$\T1/lmr/m/n/10 ], do-sto-pno na $\T1/lmtt
+/m/n/10 https : / / sl . wikipedia . org / wiki /
+ []
+
+[13] [14] (Projektna naloga pri statistiki.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                "Projektna naloga pri statistiki"
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to '"Projektna naloga pri statistiki".run
 .xml'.
@@ -1182,39 +1225,42 @@ Package logreq Info: Writing requests to '"Projektna naloga pri statistiki".run
 
  ) 
 Here is how much of TeX's memory you used:
- 28219 strings out of 478584
- 593613 string characters out of 2842513
- 1322034 words of memory out of 3000000
- 45958 multiletter control sequences out of 15000+600000
- 546946 words of font info for 87 fonts, out of 8000000 for 9000
+ 28275 strings out of 478584
+ 594491 string characters out of 2842513
+ 1328152 words of memory out of 3000000
+ 46009 multiletter control sequences out of 15000+600000
+ 555801 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,89p,842b,1500s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathi
-t.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
+ 84i,16n,89p,842b,1500s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.en
+c}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-r
+m.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
 athex.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-rm.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-mathsy.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-ec.enc}<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lm-mathsy.enc}<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmbx10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/lm/lmbx12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/lm/lmbx9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmex10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/lm/lmmi10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Upora
-bnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
-Output written on "Projektna naloga pri statistiki.pdf" (10 pages, 547934 bytes
+/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabn
+ik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Upor
+abnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
+Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Use
+rs/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Projektna naloga pri statistiki.pdf" (14 pages, 639493 bytes
 ).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 164 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

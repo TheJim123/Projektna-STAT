@@ -1,3 +1,27 @@
+#Nastavimo mesto
+#setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
+setwd("C:/Users/Jimmy/Desktop/faks/3. letnik/STAT/Projektna-STAT")
+
+#Naložimo datoteko Kibergrad v dataframe
+
+Kibergrad <- read.csv("Kibergrad.csv")
+
+# Posebej nas zanimajo dohodki.
+
+Dohodek <- Kibergrad$DOHODEK
+
+#Naložimo knjižnjico dplyr
+install.packages("dplyr")
+library(dplyr)
+
+Ena <- filter(Kibergrad, TIP == 1)
+Dve <- filter(Kibergrad, TIP == 2)
+Tri <- filter(Kibergrad, TIP == 3)
+
+DohEna <- Ena$DOHODEK
+DohDve <- Dve$DOHODEK
+DohTri <- Tri$DOHODEK
+
 #Narišimo gostote za podatke za vsak tip in primerjajmo histograme s krivuljo
 #normalne porazdelitve
 par(mfrow=c(3, 3))

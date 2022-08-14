@@ -17,11 +17,9 @@ N <- length(Dohodek)
 S <- (N-1)/N * var(Dohodek)
 
 # Sedaj se lotimo obravnave s tipi pojasnjene variance
-#Naložimo knjižnjici dplyr in lsr
+#Naložimo knjižnjico dplyr
 install.packages("dplyr")
-install.packages("lsr")
 library(dplyr)
-library(lsr)
 
 Ena <- filter(Kibergrad, TIP == 1)
 Dve <- filter(Kibergrad, TIP == 2)

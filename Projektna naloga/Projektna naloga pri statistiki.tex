@@ -198,10 +198,11 @@
 	
 	Z $n_i$ označimo število družin tipa $i$ ter z $N$ velikost naše populacije. Z $X$ označimo dohodke družin, z $Y$ pa  slučajno spremenljivko tipov družin, ki ima porazdelitev $P(Y = i) = n_i / N$. Predpostavimo, da so dohodki tipov družin $X_i = X_{|Y=i}$ medseboj neodvisni. Predpostavko upravičimo z argumentom, da v splošnem dohodek soseda ne vpliva na naš dohodek. Pomnimo tudi, da je $E\left[X|Y\right]$ neka funkcija spremenljivke $Y$, recimo $\Phi(Y)$.
 	Z $\bar{X}_i$ še označimo pričakovano vrednost dohodka v družini tipa $i$, torej $\bar{X}_i = E\left[X|Y = i\right]$. S tipom pojasnjeno varianco potem izračunamo po formuli: 
-	\begin{align*} \label{eq: explvarC}
-		& Var(E\left[X|Y\right]) = Var(\Phi(Y)) = E\left[(\Phi(Y)- E\left[\Phi(Y)\right])^2\right] =\\ 
-		&= \sum_{i = 1}^{3} (\Phi(Y = i)- E\left[\Phi(Y)\right])^2 * P(Y = i) = 1/N * \sum_{i = 1}^{3} n_i * (E\left[X|Y = i\right] - E\left[E\left[X|Y\right]\right])^2 \\ &= 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - E\left[X\right])^2 = 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - \bar{X})^2
-	\end{align*}
+	\begin{equation*} \label{eq: explvarC} \begin{split}
+			& Var(E\left[X|Y\right]) = Var(\Phi(Y)) = E\left[(\Phi(Y)- E\left[\Phi(Y)\right])^2\right] =\\ 
+			&= \sum_{i = 1}^{3} (\Phi(Y = i)- E\left[\Phi(Y)\right])^2 * P(Y = i) = \\ &= 1/N * \sum_{i = 1}^{3} n_i * (E\left[X|Y = i\right] - E\left[E\left[X|Y\right]\right])^2 = \\ &= 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - E\left[X\right])^2 = 1/N * \sum_{i = 1}^{3} n_i * (\bar{X}_i - \bar{X})^2
+		\end{split}
+	\end{equation*}
 
 	S pomočjo zgoraj pridobljene formule v \textit{Kibergrad\_c.R} poračunamo pojasnjeno varianco. Nepojasnjeno varianco nato poračunamo kot razliko populacijske variance in pojasnjene variance. Vrednosti skripta izpiše v konzolo, dostopne pa so tudi v spodnji tabeli.
 	
@@ -218,20 +219,119 @@
 		\caption{Populacijska, s tipi pojasnjena in nepojasnjena varianca}
 	\end{table}
 	
-	Opazimo, da je nepojasnjena varianca bistveno višja od pojasnjene variance. Če pogledamo delež, ki ga varianci zavzemata, nam s tipi družin pojasnjena varianca predstavlja le približno $11{,}09\%$. To nam pove, da je tip družine netrivialen faktor pri napovedi dohodka družine, ni pa glavni faktor. To se ujema s tem, kar smo razbrali v prejšnjih podpoglavjih. Že zgolj za družine tipa $1$ v podpoglavju \ref{Subsect: 1B} je bil standardni odklon, torej koren variance, razmeroma visok v vsakem vzorcu. To se ujema s tem, da večino variance pridobimo od faktorjev, ki niso tip družine. Če bi tip družine bil odgovoren za večji delež celotne variance dohodkov, bi bila varianca znotaj tipov manjša.
+	Opazimo, da je nepojasnjena varianca bistveno višja od pojasnjene variance. Če pogledamo delež, ki ga varianci zavzemata, nam s tipi družin pojasnjena varianca predstavlja le približno $11{,}09\%$. To nam pove, da je tip družine netrivialen faktor pri napovedi dohodka družine, ni pa glavni faktor. To se ujema s tem, kar smo razbrali v prejšnjih podpoglavjih. Že zgolj za družine tipa $1$ v podpoglavju \ref{subsect: 1B} je bil standardni odklon, torej koren variance, razmeroma visok v vsakem vzorcu. To se ujema s tem, da večino variance pridobimo od faktorjev, ki niso tip družine. Če bi tip družine bil odgovoren za večji delež celotne variance dohodkov, bi bila varianca znotaj tipov manjša.
 	
 	\section{Slučajni sprehod} \label{sect: SlucajniSprehod}
-	
+	Za začetek omenimo, da se podatki, ki so uporabljeni v tem delu naloge, vsebovani v datotekah \textit{Kromatin\_kratki.csv}, \textit{Kromatin\_srednji.csv} in \textit{Kromatin\_dolgi.csv}. Ti podatki so razdalje med pari zaporedij nukleotidov, ki so bile izmerjene v treh različnih eksperimentih. Spomnimo se tudi, da imajo te razdalje Rayleighovo porazdelitev, ki je podana z gostoto \begin{equation*}\label{eq: RayleighDist}
+		f(r|\theta) = \begin{cases}
+			\frac{r}{\theta^2}\exp\big(-\frac{r^2}{2\theta^2}\big)~;~r>0 \\
+			0~;~\text{sicer}
+		\end{cases}
+	\end{equation*}
+	V prvih dveh podpoglavjih, torej \ref{subsect: 2A} in \ref{subsect: 2B}, določili cenilki za $\theta$ po metodi največjega verjetja in po metodi momentov. Nato bomo za obe pridobljeni cenilki ugotovili, ali sta nepristranski oz. katera je vsaj asimptotično bolj nepristranska. Pri tem bomo uporabili izračun asimptotične srednje kvadratične napake oz. $MSE$. V preostalih delih bomo konkretno uporabili priložene datoteke z meritvami, najprej da določimo numerične ocene cenilk za vsak eksperiment (torej vsako datoteko) posebej. Za vse izračune bomo tudi ocenili standardno napako in rezultate grafično prikazali. Na koncu bomo pridobljeni gostoti primerjali s histogramom meritev.
 	\subsection{Cenilka za $\theta$ po metodi največjega verjetja} \label{subsect: 2A}
+	Denimo, da imamo $n$ medseboj neodvisnih in enako porazdeljenih spremenljivk $X_i~;~i\in\{1, 2, \ldots, n\}$, ki so vse porazdeljene z Rayleighovo porazdelitvijo \ref{eq: RayleighDist}. Verjetje definiramo s predpisom \begin{equation*}
+		L(\theta | x_1, \ldots, x_n) = \prod_{i = 1}^{n} f_{X_i}(x_i | \theta) = \begin{cases}
+			\prod_{i = 1}^{n} \frac{x_i}{\theta^2}\exp\big(-\frac{x_i^2}{2\theta^2}\big)~;~ x_1, \ldots, x_n > 0 \\
+			0~;~\text{sicer}
+		\end{cases}
+	\end{equation*}
+	Ker je lahko delo s tem produktom zahtevno, raje vse skupaj logaritmiramo in dobimo $$l(\theta|x_1,\ldots, x_n) = \sum_{i = 1}^{n} \ln(\frac{x_i}{\theta^2}) - \frac{x_i^2}{2\theta^2}~;~\textit{za}~ x_1,\ldots,x_n >0$$
+	
+	Cenilka $\theta$ po metodi največjega verjetja je neka funkcija $h(X_1,\ldots, X_n)$ pri kateri $L(\theta|x_1,\ldots, x_n)$ doseže maksimum. Logaritmiranje $L$ ohrani ta ekstrem v smislu, da če bo $L$ dosegel svoj maksimum v $\theta$, bo tam svoj maksimum dosegel tudi $l$ in obratno.
+	
+	Sedaj odvajamo $l$ po $\theta$ in dobimo: \begin{equation*}\label{eq: Verjetje}
+		\frac{\partial l}{\partial\theta} (\theta | x_1,\ldots, x_n) = \sum_{i = 1}^{n} \big(\frac{-2 * \theta^2 * x_i}{\theta^3 * x_i} - \frac{-2 * x_i^2}{2 * \theta^3}\big) = \sum_{i = 1}^{n} \big(\frac{x_i^2}{\theta^3} - \frac{2}{\theta} \big)= \sum_{i = 1}^{n} \big(\frac{x_i^2}{\theta^3}\big) - \frac{2 * n}{\theta}
+	\end{equation*}
+	Da najdemo ekstrem moramo rešiti enačbo $\frac{\partial l}{\partial\theta} (\theta | x_1,\ldots, x_n) = 0$. Ko vanjo vstavimo, kar smo ravnokar poračunali zgoraj, dobimo $$
+		\sum_{i = 1}^{n}\frac{x_i^2}{\theta^3} = \frac{2*n}{\theta}
+	$$
+	oziroma $$\sum_{i = 1}^{n}x_i^2 = 2*n*\theta^2$$ Ker v zapisu porazdelitve  nastopa $\theta^2$, bi se lahko ustavili kar tukaj in bili zadovoljni s cenilko za $\theta^2$, ki jo brez težav izrazimo iz zgornje enakosti. Ker pa nas zanima cenilka za $\theta$ moramo izraženo cenilko za $\theta^2$ še koreniti. Velja: $$\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2 * n}}$$ Za cenilko $\theta$ po metodi največjega verjetja izberemo koren s pozitivnim predznakom. Cenilka $\theta$ po metodi največjega verjetja je torej $\widehat{\theta} = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$. Vrednost cenilke je odvisna od števila spremenljivk. Bolj primerna je torej oznaka $$\widehat{\theta}_n = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$$
 	
 	\subsection{Cenilka za $\theta$ po metodi momentov}\label{subsect: 2B}
+	Sedaj se obrnemo na metodo momentov. Denimo, da so $X_1,\ldots, X_n$ neodvisne enako porazdeljene slučajne spremenljivke. Da določimo cenilko za izbrane parametre po tej metodi, moramo najprej poračunati momente nizkih stopenj, torej $E\left[X^k\right]$, v odvisnosti od parametrov, ki jih želimo oceniti. Nato iz dobljenih enačb izrazimo parametre v odvisnosti od momentov. Cenilko za parametre dobimo tako, da v enačbi $k$-ti moment zamenjamo s povprečjem $k$-tih potenc $\frac{1}{n}\sum_{i=1}^{n}X_i^k$. Ker v našem primeru skušamo oceniti samo en paramater, $\theta$, načeloma zadošča če izračunamo samo prvi moment.
 	
+	\begin{equation*}
+		E\left[X\right] = \int_{-\infty}^{\infty}x f(x|\theta)\,dx = \int_{0}^{\infty} \frac{x^2}{\theta^2}e^{-\frac{x^2}{2\theta^2}}\,dx
+	\end{equation*}
+	Uvedemo novo spremenljivko $u =\frac{x^2}{2\theta^2}~;~du = \frac{x}{\theta^2}\,dx$, torej je~$dx = \frac{\theta^2}{x} du$. Naš integral nato postane:
+	\begin{equation*}
+		\int_{0}^{\infty} x e^{-u}\,du = \int_{0}^{\infty} \sqrt{2u\theta^2} e^{-u}\,du = \theta\sqrt{2} \int_{0}^{\infty} u^{\frac{1}{2}}e^{-u}\,du
+	\end{equation*}
+	V integralu prepoznamo obliko gama funkcije in hitro ugotovimo, da je integral enak $\Gamma(\frac{3}{2}) = \frac{1}{2}\sqrt{\pi}$.
+	
+	Sledi, da je pričakovana vrednost Rayleighove porazdelitve s parametrom $\theta$ enaka $\sqrt{\frac{\pi}{2}}\theta$. Od tod izrazimo $\theta$ kot $\theta = \sqrt{\frac{2}{\pi}}E\left[X\right]$. Cenilka $\theta$ po metodi momentov je torej $\widehat{\theta} = \sqrt{\frac{2}{\pi}}\bar{X} = \frac{\sqrt{2}}{n\sqrt{\pi}}\sum_{i=1}^{n}X_i$.
+	Tudi v tem primeru nam število spremenljivk vpliva na vrednost cenilke. Zato smo v resnici pridobili celo zaporedje cenilk $\widehat{\theta}_n$, tako kot v prejšnjem podpoglavju.
+
 	\subsection{Asimptotični $MSE$ cenilk}\label{subsect: 2C}
+	Srednja kvadratična napaka cenilke definirana s formulo $MSE(\widehat{\theta}|\theta) = E[(\widehat{\theta} - \theta)^2]$. Da izračunamo asimptotično $MSE$, najprej za fiksen $n$ poračunamo $MSE$, nato pa dobljeno limitiramo: $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n | \theta)$. Pri računanju nam tudi pomaga enakost $MSE(\widehat{\theta} | \theta) = Var(\widehat{\theta}) + Bias(\widehat{\theta}|\theta)^2$.
+	Pri tem se pristranskost oz >>Bias<< izračuna po formuli $Bias(\widehat{\theta}|\theta) = E[\widehat{\theta}] - \theta$.
+	\subsubsection{MSE cenilke po metodi največjega verjetja}
+	Začnimo s cenilko, ki smo jo pridobili po metodi največjega verjetja. Najprej za fiksen $n$ poračunamo pristranskost. Pri tem nam pomaga informacija, da ima $Y = \sum_{i = 1}^{n} X_i^2$ gama porazdelitev $\Gamma(n, \frac{1}{2*\theta^2})$.
+	\begin{equation*}
+		E[\widehat{\theta}_n] = E[\frac{1}{\sqrt{2n}}\sqrt{Y}] = \frac{1}{\sqrt{2n}} E[\sqrt{Y}]
+	\end{equation*}
+	Poračunajmo sedaj $E[\sqrt{Y}]$.
+	\begin{equation*}
+		E[\sqrt{Y}] =  \int_{0}^{\infty}\sqrt{y}\frac{(\frac{1}{2\theta^2})^n}{\Gamma(n)}y^{n-1}e^{-\frac{y}{2\theta^2}}\, dy = \int_{0}^{\infty}(\frac{y}{2\theta^{2}})^n\frac{1}{\Gamma(n)\sqrt{y}} e^{-\frac{y}{2\theta^2}}\,dy
+	\end{equation*}
+	Vstavimo novo spremenljivko $u = \frac{y}{2\theta^2}~;~du = \frac{1}{2\theta^2}\, dy$. Pri tem še opazimo, da je $\sqrt{y} = \sqrt{2\theta^2 u}$. Sedaj vstavimo to v integral.
 	
-	\subsection{Številska ocena prve cenilke} \label{subsect: 2D}
+	\begin{equation*}
+		E[\sqrt{Y}] = \int_{0}^{\infty} u^n \frac{1}{\Gamma(n)\sqrt{2\theta^2}\sqrt{u}} e^{-u} 2\theta^2\,du = \frac{\sqrt{2\theta^2}}{\Gamma(n)} \int_{0}^{\infty} u^{n - \frac{1}{2}} e^{-u}\,du = \sqrt{2\theta^2}\frac{\Gamma(n+\frac{1}{2})}{\Gamma(n)}
+	\end{equation*}
+	Sledi, da je $E[\widehat{\theta}_n] = \frac{\theta\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = \frac{\theta\sqrt{n\pi}(2n)!}{(n!)^2 4^n}$. Sledi, da je $\theta_n$ pristranska cenilka, saj je $E[\widehat{\theta}_n] - \theta = \theta (\frac{\sqrt{n\pi}(2n)!}{(n!)^2 4^n} - 1) \neq 0$ za $\theta\neq 0$. Cenilko lahko popravimo na nepristransko. Nepristranska cenilka je tako $$\theta_n^+ = \frac{(n!)^2 4^n}{\sqrt{n\pi}(2n)!}\widehat{\theta}_n = \frac{(n!)^2 4^n}{n\sqrt{2\pi}(2n)!}\sqrt{\sum_{i = 1}^{n} X_i^2}$$ oziroma, če ohranimo zapis z $\Gamma$ je nepristranska cenilka $$\theta_n^+ = \frac{\Gamma(n)\sqrt{n}}{\Gamma(n + \frac{1}{2})}\widehat{\theta}_n = \frac{\Gamma(n)}{\Gamma(n + \frac{1}{2})\sqrt{2}}\sqrt{\sum_{i = 1}^{n} X_i^2}$$
+	Uspelo nam je torej izračunati pristranskost naše cenilke $\widehat{\theta}_n$: $$Bias(\widehat{\theta}_n) = \theta (\frac{\sqrt{n\pi}(2n)!}{(n!)^2 4^n} - 1)$$
 	
+	Ko poračunamo limito $\lim_{n\mapsto\infty} \frac{\sqrt{n\pi}(2n)!}{(n!)^2 4^n} = 1$, vidimo, da je $\widehat{\theta}_n$ asimptotsko nepristranska, saj je $\lim_{n\mapsto\infty}Bias(\widehat{\theta}_n) = 0$.
+	
+	Poračunati moramo še varianco cenilke $Var(\widehat{\theta}_n = E[\frac{1}{2n} Y] - E[\widehat{\theta}_n]^2)$. Porazdelitev $Y$ poznamo, tako da hitro pridobimo $E[\frac{1}{2n} Y] = 2n\theta^2$. Sledi $$Var(\widehat{\theta}_n) = \theta^2 (2n -  (\frac{\sqrt{n\pi}(2n)!}{(n!)^2 4^n})^2)$$
+	Ko to varianco limitiramo z $n\mapsto\infty$, gre drugi člen v oklepaju proti $1$, prvi člen pa proti $\infty$, torej je $\lim_{n\mapsto\infty}Var(\widehat{\theta}_n) = \infty$. Posledično je asimptotična $MSE(\widehat{\theta}_n)$ neskončna, torej $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n) = \infty$.
+	\subsubsection{MSE cenilke po metodi momentov}
+	Sedaj storimo enako še za cenilko, ki smo jo pridobili po metodi momentov $\widehat{\theta}_n = \sqrt{\frac{2}{\pi}}\bar{X}$. Najprej poračunajmo njeno pričakovano vrednost.
+	
+	\begin{equation*}		
+		E[\widehat{\theta}_n] = \frac{\sqrt{2}}{n\sqrt{\pi}} \sum_{i=1}^{n} E[X_i] = \sqrt{\frac{2}{\pi}} E[X] = \theta
+	\end{equation*}
+	
+	Od tod lahko že sklepamo, da je $\widehat{\theta}_n$ nepristranska cenilka. Sledi, da je $MSE(\widehat{\theta}_n) = Var(\widehat{\theta}_n)$. Poračunajmo sedaj še varianco in pri tem upoštevamo, da so $X_i$ medseboj neodvisne in enako porazdeljene.
+	
+	\begin{equation*}		
+		Var(\widehat{\theta}_n) = \frac{2}{n^2\pi}Var(\sum_{i = 1}^{n}X_i) = \frac{2}{n^2 \pi} \sum_{i = 1}^{n}Var(x_i) = \frac{2}{n \pi} Var(X)
+	\end{equation*}
+	
+	Na tej točki se skličemo na varianco rayleighove porazdelitve s parametrom $\theta^2$, ki je enaka $\frac{4 - \pi}{2}\theta^2$. Sledi, da je $Var(\widehat{\theta}_n) = \frac{2}{n\pi} * \frac{4 - \pi}{2}\theta^2 = \frac{(4-\pi)}{n\pi}\theta^2$, ki konvergira proti $0$ ko pošljemo $n\mapsto\infty$. Posledično je $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n) = \lim_{n\mapsto\infty} Var(\widehat{\theta}_n) =0$.
+	
+	Sklepamo, da je cenilka, ki smo jo pridobili po metodi momentov, asimptotično boljša od cenilke, ki smo jo pridobili po metodi največjega verjetja.
+	
+	\subsection{Ševilska ocena prve cenilke} \label{subsect: 2D}
+	
+	Številsko oceno cenilke za vsak eksperiment izvedemo s pomočjo skripte \textit{SlucajniSprehodiMNV.R}. Ta ob zagonu poračuna številske vrednosti cenilke, izriše grafe gostot za vsak eksperiment ter oceni standardno napako cenilke. Vrednosti cenilk in standardnih napak so zbrane v spodnji tabeli.
+	
+	\begin{table}[h!]
+		\label{tab: mnvse}
+		\centering
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Eksperiment & kratki & srednji & dolgi \\ \hline
+			Vrednost $\theta$ & $1{,}117394$ & $2{,}075983$ & $3{,}324422$ \\ \hline
+			Ocena SE & $0{,}06242013$ & $0{,}08741853$ & $0{,}1705984$ \\ \hline
+		\end{tabular}
+		\caption{Numerične vrednosti MNV cenilke in standardne napake po eksperimentih}
+	\end{table}
+
 	\subsection{Številska ocena druge cenilke} \label{subsect: 2E}
-	
+	\begin{table}[h!]
+		\label{tab: mmse}
+		\centering
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Eksperiment & kratki & srednji & dolgi \\ \hline
+			Vrednost $\theta$ & $1{,}163652$ & $2{,}068998$ & $3{,}412388$ \\ \hline
+%			Ocena SE & $0{,}06275128$ & $0{,}08759531$ & $0{,}1712533$ \\ \hline
+		\end{tabular}
+		\caption{Numerične vrednosti cenilke pridobljene po metodi momentov in standardne napake po eksperimentih}
+	\end{table}
 	\subsection{Histogram meritev in grafi gostot cenilk} \label{subsect: 2F}
 	
 	\section{Temperature}\label{sect: Temperature}
@@ -240,5 +340,8 @@
 	
 	\subsection{Akikakejeva informacija modelov}\label{subsect: 3B}
 	
-	
+\begin{thebibliography}{99}
+	\bibitem{bib:Rice} John Rice, \emph{Mathematical Statistics \& Data Analysis}, Duxbury, Berkeley, $2007$.
+	\bibitem{bib:Rayleigh} \emph{Rayleighjeva porazdelitev},~v: Wikipedia,~Prosta enciklopedija, [ogled $14$.~$7$.~$2022$], dostopno na \url{https://sl.wikipedia.org/wiki/Rayleighjeva_porazdelitev}.
+\end{thebibliography}
 \end{document}
