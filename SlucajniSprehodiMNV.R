@@ -1,5 +1,5 @@
 #Nastavimo mesto datoteke (Po potrebi spremenite na mesto, kamor ste shranili datoteke)
-setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
+#Npr. setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
 
 #Naložimo podatke eksperimentov
 kratki <- read.csv("Kromatin_kratki.csv")
@@ -14,21 +14,26 @@ n1 <- nrow(kratki)
 x1 <- kratki[, 1]
 t1 <- sqrt(sum(x1^2)/(2*n1))
 
-SE1 <- sqrt(var(x1)*(n1-1)/n1^2)
+SE1 <- t1*sqrt(1 - (gamma(n1 + 0.5)/(sqrt(n1)*gamma(n1)))^2)
 
 #Drugi eksperiment
 n2 <- nrow(srednji)
 x2 <- srednji[, 1]
 t2 <- sqrt(sum(x2^2)/(2*n2))
 
-SE2 <- sqrt(var(x2)*(n2-1)/n2^2)
+# SE2 <- t2*sqrt(1 - (gamma(n2 + 0.5)/(sqrt(n2)*gamma(n2)))^2)
+#Pri izračunu gamma(n2) nam R vrne Inf (neskončno). Posledično, nam za SE2 vrne
+#vrednost NaN. Zaradi tega bomo tukaj vstavili drugod izračunano vrednost.
+#Spletna stran wolframalpha nam vrne numerični rezultat
+SE2 <- 0.06589590
 
 #Tretji eksperiment
 n3 <- nrow(dolgi)
 x3 <- dolgi[, 1]
 t3 <- sqrt(sum(x3^2)/(2*n3))
 
-SE3 <- sqrt(var(x3)*(n3-1)/n3^2)
+SE3 <- t3*sqrt(1 - (gamma(n3 + 0.5)/(sqrt(n3)*gamma(n3)))^2)
+
 
 #Zapišimo ocenjene gostote porazdelitve
 
@@ -62,15 +67,29 @@ gost3 <- function(r) {
 
 #Za vsak eksperiment še narišemo gostoto porazdelitve
 
-par(mfrow=c(2, 3))
-plot(density(x1), main="Gostota razdalj v 1. poskusu")
-plot(density(x2), main="Gostota razdalj v 2. poskusu")
-plot(density(x3), main="Gostota razdalj v 3. poskusu")
+par(mfrow=c(1, 3))
 
-x <- seq(0, 11, 0.01)
-plot(x, gost1(x), type="l", main="Gostota razdalj v 1. poskusu")
-plot(x, gost2(x), type="l", main="Gostota razdalj v 2. poskusu")
-plot(x, gost3(x), type="l", main="Gostota razdalj v 3. poskusu")
+xk <- sort(c(seq(0, 6, 0.001), t1-SE1, t1, t1+SE1))
+xd <- sort(c(seq(0, 8, 0.001), t2-SE2, t2, t2+SE2))
+xs <- sort(c(seq(0, 12, 0.001), t3-SE3, t3, t3+SE3))
+
+plot(xk, gost1(xk), type="l", main="Gostota razdalj v 1. poskusu", xaxt= "n")
+axis(1, at = sort(c(seq(0, 6, 2), round(t1, 5))), las=2)
+abline(v = t1, color = "green")
+abline(v = t1-SE1, col = "red", lty = 2, lwd=1)
+abline(v = t1+SE1, col = "red", lty = 2, lwd=1)
+
+plot(xd, gost2(xd), type="l", main="Gostota razdalj v 2. poskusu", xaxt= "n")
+axis(1, at = sort(c(seq(0, 8, 2), round(t2, 5))), las=2)
+abline(v = t2, color = "green")
+abline(v = t2-SE2, col = "red", lty = 2, lwd=1)
+abline(v = t2+SE2, col = "red", lty = 2, lwd=1)
+
+plot(xs, gost3(xs), type="l", main="Gostota razdalj v 3. poskusu", xaxt= "n")
+axis(1, at = sort(c(seq(0, 12, 2), round(t3, 5))), las=2)
+abline(v = t3, color = "green")
+abline(v = t3-SE3, col = "red", lty = 2, lwd=1)
+abline(v = t3+SE3, col = "red", lty = 2, lwd=1)
 
 cat("Približek za theta v prvem eksperimentu je", t1, ".")
 cat("Standardna napaka v njem pa znaša",SE1, ".")

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.15)  14 AUG 2022 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.15)  23 AUG 2022 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1179,38 +1179,99 @@ Overfull \hbox (9.35571pt too wide) detected at line 245
 ]
  []
 
-[10] [11]
-Overfull \hbox (21.47913pt too wide) detected at line 282
+[10]
+Overfull \hbox (3.65393pt too wide) detected at line 249
+[]\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10  \OT1/lmr/m/n/10 3)[] + [] = []([] [] + 1) 
+= (\OMS/lmsy/m/n/10  \OT1/lmr/m/n/10 2)[] \OML/lmm/m/it/10 < \OT1/lmr/m/n/10 0
+ []
+
+
+Overfull \hbox (6.12209pt too wide) in paragraph at lines 251--252
+[]\T1/lmr/m/n/10 Ugotovili smo ºe, da ima ver-je-tje $\OML/lmm/m/it/10 l$ \T1/l
+mr/m/n/10 en sam ek-s-trem, ki ga do-seºe v $\OML/lmm/m/it/10  \OT1/lmr/m/n/10
+ = \OMS/lmsy/m/n/10 []$\T1/lmr/m/n/10 ,
+ []
+
+[11]
+Overfull \hbox (21.47913pt too wide) detected at line 284
 \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [[]] = [][] \OML/lmm/m/it/10 u[][]e[]\OT1/lmr
 /m/n/10 2\OML/lmm/m/it/10 [] du \OT1/lmr/m/n/10 = [] [][] \OML/lmm/m/it/10 u[]
 e[] du \OT1/lmr/m/n/10 = [][]
  []
 
-
-Overfull \hbox (5.47542pt too wide) in paragraph at lines 297--298
+[12]
+Overfull \hbox (5.47542pt too wide) in paragraph at lines 298--299
 []\T1/lmr/m/n/10 Od tod lahko ºe skle-pamo, da je $[]$ ne-pri-stran-ska ce-nilk
 a. Sledi, da je $\OML/lmm/m/it/10 MSE\OT1/lmr/m/n/10 ([]) =
  []
 
-[12]
+[13]
+<VerjetjeMNV1.jpg, id=71, 501.37312pt x 499.8675pt>
+File: VerjetjeMNV1.jpg Graphic file (type jpg)
+<use VerjetjeMNV1.jpg>
+Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 332.
+(pdftex.def)             Requested size: 225.61581pt x 224.9383pt.
+<VerjetjeMNV2.jpg, id=72, 502.12593pt x 499.8675pt>
+File: VerjetjeMNV2.jpg Graphic file (type jpg)
+<use VerjetjeMNV2.jpg>
+Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 339.
+(pdftex.def)             Requested size: 225.95457pt x 224.9383pt.
+<VerjetjeMNV3.jpg, id=73, 497.60907pt x 495.35063pt>
+File: VerjetjeMNV3.jpg Graphic file (type jpg)
+<use VerjetjeMNV3.jpg>
+Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 346.
+(pdftex.def)             Requested size: 223.92201pt x 222.90572pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
+<VerjetjeMM1.jpg, id=78, 499.8675pt x 500.62032pt>
+File: VerjetjeMM1.jpg Graphic file (type jpg)
+<use VerjetjeMM1.jpg>
+Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 371.
+(pdftex.def)             Requested size: 224.9383pt x 225.27705pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<VerjetjeMM2.jpg, id=79, 499.8675pt x 499.11469pt>
+File: VerjetjeMM2.jpg Graphic file (type jpg)
+<use VerjetjeMM2.jpg>
+Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 378.
+(pdftex.def)             Requested size: 224.9383pt x 224.59952pt.
+<VerjetjeMM3.jpg, id=80, 501.37312pt x 498.36188pt>
+File: VerjetjeMM3.jpg Graphic file (type jpg)
+<use VerjetjeMM3.jpg>
+Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 385.
+(pdftex.def)             Requested size: 225.61581pt x 224.26077pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./VerjetjeMNV3.jpg>] [16 <./VerjetjeMM1.jpg> <./VerjetjeMM2.jpg>] [17 <./V
+erjetjeMM3.jpg>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-45.
- (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+99.
+
+(C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 []\T1/lmr/m/it/10 Rayleighjeva po-raz-de-li-tev\T1/lmr/m/n/10 , v: Wi-ki-pe-dia
 , Pro-sta en-ci-klo-pe-dija,
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 345--346
+Underfull \hbox (badness 1418) in paragraph at lines 399--400
 \T1/lmr/m/n/10 [ogled $\OT1/lmr/m/n/10 14$\T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 7$\
 T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 2022$\T1/lmr/m/n/10 ], do-sto-pno na $\T1/lmtt
 /m/n/10 https : / / sl . wikipedia . org / wiki /
  []
 
-[13] [14] (Projektna naloga pri statistiki.aux)
+[18] (Projektna naloga pri statistiki.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1225,13 +1286,13 @@ Package logreq Info: Writing requests to '"Projektna naloga pri statistiki".run
 
  ) 
 Here is how much of TeX's memory you used:
- 28275 strings out of 478584
- 594491 string characters out of 2842513
- 1328152 words of memory out of 3000000
- 46009 multiletter control sequences out of 15000+600000
+ 28354 strings out of 478584
+ 596086 string characters out of 2842513
+ 1328423 words of memory out of 3000000
+ 46088 multiletter control sequences out of 15000+600000
  555801 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,89p,842b,1500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,16n,89p,2645b,1500s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.en
 c}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathi
 t.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-r
@@ -1246,21 +1307,23 @@ fonts/type1/public/lm/lmmi10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabn
-ik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Upor
-abnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
-Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Use
-rs/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Projektna naloga pri statistiki.pdf" (14 pages, 639493 bytes
+ograms/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/Uporabnik/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabni
+k/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Upor
+abnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/U
+porabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Use
+rs/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/
+Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+
+Output written on "Projektna naloga pri statistiki.pdf" (18 pages, 908789 bytes
 ).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
+ 187 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
