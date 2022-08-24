@@ -5,7 +5,7 @@
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{leftidx}
-\usepackage{biblatex}
+%\usepackage[style=numeric]{biblatex}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsfonts}
@@ -24,21 +24,21 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 
-\newtheorem{izr}{Izrek}
-\newtheorem{posl}{Posledica}[izr]
+%\newtheorem{izr}{Izrek}
+%\newtheorem{posl}{Posledica}[izr]
 
-\newcounter{defcount}
-\newcounter{opombe}
-\newcounter{zgledcount}
+%\newcounter{defcount}
+%\newcounter{opombe}
+%\newcounter{zgledcount}
 
-\newenvironment{opomba}{\begin{flushleft}\stepcounter{opombe}\textbf{Opomba \arabic{opombe}:}}{\hfill\end{flushleft}}
-\setlength{\parindent}{0mm}
+%\newenvironment{opomba}{\begin{flushleft}\stepcounter{opombe}\textbf{Opomba \arabic{opombe}:}}{\hfill\end{flushleft}}
+%\setlength{\parindent}{0mm}
 
-\newenvironment{zgled}{\begin{flushleft}\stepcounter{zgledcount}\textbf{Zgled \arabic{zgledcount}:}}{\hfill\end{flushleft}}
-\setlength{\parindent}{0mm}
+%\newenvironment{zgled}{\begin{flushleft}\stepcounter{zgledcount}\textbf{Zgled \arabic{zgledcount}:}}{\hfill\end{flushleft}}
+%\setlength{\parindent}{0mm}
 
-\newenvironment{definicija}{\begin{flushleft}\stepcounter{defcount}\textbf{Definicija \arabic{defcount}:}}{\hfill\end{flushleft}}
-\setlength{\parindent}{0mm}
+%\newenvironment{definicija}{\begin{flushleft}\stepcounter{defcount}\textbf{Definicija \arabic{defcount}:}}{\hfill\end{flushleft}}
+%\setlength{\parindent}{0mm}
 
 \newcommand{\naslov}[1]{\textit{#1}}
 \newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
@@ -239,16 +239,16 @@
 	Ker je lahko delo s tem produktom zahtevno, raje vse skupaj logaritmiramo in dobimo $$l(\theta|x_1,\ldots, x_n) = \sum_{i = 1}^{n} \ln(\frac{x_i}{\theta^2}) - \frac{x_i^2}{2\theta^2}~;~\textit{za}~ x_1,\ldots,x_n >0$$
 	
 	Cenilka $\theta$ po metodi največjega verjetja je neka funkcija $h(X_1,\ldots, X_n)$ pri kateri $L(\theta|x_1,\ldots, x_n)$ doseže maksimum za vse $X_1,\ldots, X_n$. Logaritmiranje $L$ ohrani ta ekstrem v smislu, da če bo $L$ dosegel svoj maksimum v $\theta$, bo tam svoj maksimum dosegel tudi $l$ in obratno.
-	Opazimo, da je za vsak $i \in \{1, 2, \ldots, n\}$ funkcija $\ln(\frac{x_i}{\theta^2}) - \frac{x_i^2}{2\theta^2}$ glede na $\theta$ najprej strogo naraščujoča, nato pa strogo padajoča. Sledi, da bo taka tudi vsota teh funkcij, kar je ravno verjetje $l$. Če bo $l$ imela ekstrem, bo to (glede na $\theta$) en sam.
 	Sedaj odvajamo $l$ po $\theta$ in dobimo: \begin{equation*}\label{eq: Verjetje}
 		\frac{\partial l}{\partial\theta} (\theta | x_1,\ldots, x_n) = \sum_{i = 1}^{n} \big(\frac{-2 * \theta^2 * x_i}{\theta^3 * x_i} - \frac{-2 * x_i^2}{2 * \theta^3}\big) = \sum_{i = 1}^{n} \big(\frac{x_i^2}{\theta^3} - \frac{2}{\theta} \big)= \sum_{i = 1}^{n} \big(\frac{x_i^2}{\theta^3}\big) - \frac{2 * n}{\theta}
 	\end{equation*}
 	Da najdemo ekstrem moramo rešiti enačbo $\frac{\partial l}{\partial\theta} (\theta | x_1,\ldots, x_n) = 0$. Ko vanjo vstavimo, kar smo ravnokar poračunali zgoraj, dobimo $$
 		\sum_{i = 1}^{n}\frac{x_i^2}{\theta^3} = \frac{2*n}{\theta}
 	$$
-	oziroma $$\sum_{i = 1}^{n}x_i^2 = 2*n*\theta^2$$ Od tod izrazimo $\theta^2$ iz zgornje enakosti in rezultat korenimo, da dobimo $\theta$. Velja: $$\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2 * n}}$$ Preveriti moramo še, da $l$ v $\theta$ res doseže maksimum. Za to poračunamo drugi odvod $l$ po $\theta$: $$\frac{\partial^2 l}{\partial\theta^2}(\theta | x_1, \ldots, x_n) = \sum_{i = 1}^{n} (-3)\frac{x_i^2}{\theta^4} + \frac{2n}{\theta^2}$$. Sedaj v izraz vstavimo $\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2 * n}}$ in tako dobimo $$\sum_{i=1}^{n} (-3)\frac{4 n^2 x_i^2}{(\sum_{i = 1}^{n}x_i^2)^2} + \frac{4n^2}{\sum_{i=1}^{n}x_i^2} = \frac{4n^2}{\sum_{i=1}^{n}x_i^2}(\sum_{i=1}^{n}\frac{(-3)x_i^2}{\sum_{i = 1}^{n}x_i^2} +1) = (-2)\frac{4n^2}{\sum_{i=1}^{n}x_i^2} < 0$$
+	oziroma $$\sum_{i = 1}^{n}x_i^2 = 2*n*\theta^2$$ Od tod izrazimo $\theta^2$ iz zgornje enakosti in rezultat korenimo, da dobimo $\theta$. Velja: $$\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2 * n}}$$ Preveriti moramo še, da $l$ v $\theta$ res doseže maksimum. Za to poračunamo drugi odvod $l$ po $\theta$: $$\frac{\partial^2 l}{\partial\theta^2}(\theta | x_1, \ldots, x_n) = \sum_{i = 1}^{n} (-3)\frac{x_i^2}{\theta^4} + \frac{2n}{\theta^2}$$ 
+	Sedaj v izraz vstavimo $\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2 * n}}$ in tako dobimo $$\sum_{i=1}^{n} (-3)\frac{4 n^2 x_i^2}{(\sum_{i = 1}^{n}x_i^2)^2} + \frac{4n^2}{\sum_{i=1}^{n}x_i^2} = \frac{4n^2}{\sum_{i=1}^{n}x_i^2}(\frac{(-3)\sum_{i=1}^{n}x_i^2}{\sum_{i = 1}^{n}x_i^2} +1) = (-2)\frac{4n^2}{\sum_{i=1}^{n}x_i^2} < 0$$
 	
-	Ugotovili smo že, da ima verjetje $l$ en sam ekstrem, ki ga doseže v $\theta = \pm \sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2n}}$, sedaj pa smo pokazali, da je ta ekstrem maksimum. Za cenilko $\theta$ po metodi največjega verjetja izberemo koren s pozitivnim predznakom. Cenilka $\theta$ po metodi največjega verjetja je torej $\widehat{\theta} = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$. Vrednost cenilke je odvisna od števila spremenljivk. Bolj primerna je torej oznaka $\widehat{\theta}_n = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$.
+	Ugotovili smo že, da ima verjetje $l$ ekstrema v $+\sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2n}}$ in $-\sqrt{\frac{\sum_{i = 1}^{n}x_i^2}{2n}}$, sedaj pa vemo tudi, da sta oba ekstrema maksimuma. Za cenilko $\theta$ po metodi največjega verjetja izberemo koren s pozitivnim predznakom. Cenilka $\theta$ po metodi največjega verjetja je torej $\widehat{\theta} = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$. Vrednost cenilke je odvisna od števila spremenljivk. Bolj primerna je torej oznaka $\widehat{\theta}_n = \sqrt{\frac{\sum_{i = 1}^{n}X_i^2}{2 * n}}$.
 	
 	\subsection{Cenilka za $\theta$ po metodi momentov}\label{subsect: 2B}
 	Sedaj se obrnemo na metodo momentov. Denimo, da so $X_1,\ldots, X_n$ neodvisne enako porazdeljene slučajne spremenljivke. Da določimo cenilko za izbrane parametre po tej metodi, moramo najprej poračunati momente nizkih stopenj, torej $E\left[X^k\right]$, v odvisnosti od parametrov, ki jih želimo oceniti. Nato iz dobljenih enačb izrazimo parametre v odvisnosti od momentov. Cenilko za parametre dobimo tako, da v enačbi $k$-ti moment zamenjamo s povprečjem $k$-tih potenc $\frac{1}{n}\sum_{i=1}^{n}X_i^k$. Ker v našem primeru skušamo oceniti samo en paramater, $\theta$, načeloma zadošča če izračunamo samo prvi moment.
@@ -268,8 +268,8 @@
 	\subsection{Asimptotični $MSE$ cenilk}\label{subsect: 2C}
 	Srednja kvadratična napaka cenilke definirana s formulo $MSE(\widehat{\theta}|\theta) = E[(\widehat{\theta} - \theta)^2]$. Da izračunamo asimptotično $MSE$, najprej za fiksen $n$ poračunamo $MSE$, nato pa dobljeno limitiramo: $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n | \theta)$. Pri računanju nam tudi pomaga enakost $MSE(\widehat{\theta} | \theta) = Var(\widehat{\theta}) + Bias(\widehat{\theta}|\theta)^2$.
 	Pri tem se pristranskost oz >>Bias<< izračuna po formuli $Bias(\widehat{\theta}|\theta) = E[\widehat{\theta}] - \theta$.
-	\subsubsection{MSE cenilke po metodi največjega verjetja}
-	Začnimo s cenilko, ki smo jo pridobili po metodi največjega verjetja. Najprej za fiksen $n$ poračunamo pristranskost. Pri tem nam pomaga informacija, da ima $Y = \sum_{i = 1}^{n} X_i^2$ gama porazdelitev $\Gamma(n, \frac{1}{2*\theta^2})$.
+	\subsubsection{MSE cenilke po metodi največjega verjetja}\label{subsubsect: 2C1}
+	Začnimo s cenilko, ki smo jo pridobili po metodi največjega verjetja. Najprej za fiksen $n$ poračunamo pristranskost. Pri tem nam pomaga informacija, ki smo jo pridobili iz vira \cite{bib:Rayleigh}, da ima $Y = \sum_{i = 1}^{n} X_i^2$ gama porazdelitev $\Gamma(n, \frac{1}{2*\theta^2})$.
 	\begin{equation*}
 		E[\widehat{\theta}_n] = E[\frac{1}{\sqrt{2n}}\sqrt{Y}] = \frac{1}{\sqrt{2n}} E[\sqrt{Y}]
 	\end{equation*}
@@ -285,7 +285,7 @@
 	Sledi, da je $E[\widehat{\theta}_n] = \frac{\theta\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)}$ in potem je $\widehat{\theta}_n$ pristranska cenilka, saj je $$E[\widehat{\theta}_n] - \theta = \theta (\frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} - 1) \neq 0$$ za $\theta\neq 0$. Cenilko lahko popravimo na nepristransko. Nepristranska cenilka je tako $$\theta_n^+ = \frac{\Gamma(n)\sqrt{n}}{\Gamma(n + \frac{1}{2})}\widehat{\theta}_n = \frac{\Gamma(n)}{\Gamma(n + \frac{1}{2})\sqrt{2}}\sqrt{Y}$$
 	Uspelo nam je torej izračunati pristranskost naše cenilke $\widehat{\theta}_n$: $$Bias(\widehat{\theta}_n) = \theta(\frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} - 1)$$
 	
-	Ko poračunamo limito $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$, vidimo, da je $\widehat{\theta}_n$ asimptotsko nepristranska, saj sledi $\lim_{n\mapsto\infty}Bias(\widehat{\theta}_n) = 0$. Poračunati moramo še varianco cenilke $Var(\widehat{\theta}_n) = E[\frac{1}{2n} Y] - E[\widehat{\theta}_n]^2$. Porazdelitev $Y$ poznamo, tako da hitro pridobimo $E[\frac{1}{2n} Y] = \theta^2$. Sledi $$Var(\widehat{\theta}_n) = \theta^2(1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2})$$
+	Ko poračunamo limito $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$, vidimo, da je $\widehat{\theta}_n$ asimptotsko nepristranska, saj sledi $\lim_{n\mapsto\infty}Bias(\widehat{\theta}_n) = 0$. Poračunati moramo še varianco cenilke $Var(\widehat{\theta}_n) = E[\widehat{\theta}_n^2] - E[\widehat{\theta}_n]^2 = E[\frac{1}{2n} Y] - E[\widehat{\theta}_n]^2$. Za Porazdelitev $Y$ vemo, da je $\Gamma(n, \frac{1}{2\theta^2})$, tako da hitro pridobimo $E[\frac{1}{2n} Y] = \frac{1}{2n}\frac{n}{\frac{1}{2\theta^2}} = \frac{1}{2n}2n\theta^2 = \theta^2$. Sledi $$Var(\widehat{\theta}_n) = \theta^2(1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2})$$
 	Ko to varianco limitiramo z $n\mapsto\infty$, gre izraz v oklepaju proti $0$, torej je $\lim_{n\mapsto\infty}Var(\widehat{\theta}_n) = 0$. Posledično je asimptotična $MSE(\widehat{\theta}_n)$ enaka $0$, torej $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n) = 0$.
 	
 	\subsubsection{MSE cenilke po metodi momentov}\label{subsubsect: 2C2}
@@ -307,8 +307,8 @@
 	
 	\subsection{Ševilska ocena prve cenilke} \label{subsect: 2D}
 	
-	Številsko oceno cenilke za vsak eksperiment izvedemo s pomočjo skripte \textit{SlucajniSprehodiMNV.R}. Ta ob zagonu poračuna številske vrednosti cenilke, izriše pripadajoče grafe gostot za vsak eksperiment ter oceni standardno napako cenilke. Pri tem standardno napako $SE(\widehat{\theta}_n)$ cenilke pridobljene po metodi največjega verjetja izračunamo kot koren njene variance. Velja torej, da je $SE(\widehat{\theta}_n) = \theta\sqrt{1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2}}$.
-	Prej omenjena skripta ocenjene vrednosti cenilk in standardnih napak izpiše v konzolo, so pa zbrane tudi v spodnji tabeli.
+	Številsko oceno cenilke za vsak eksperiment izvedemo s pomočjo skripte \textit{SlucajniSprehodiMNV.R}. Ta ob zagonu poračuna številske vrednosti cenilke, oceni standardno napako vsake cenilke ter izriše pripadajoče grafe gostot za vsak eksperiment in graf na katerem so prikazani vsi trije grafi. Pri tem standardno napako $SE(\widehat{\theta}_n)$ cenilke pridobljene po metodi največjega verjetja izračunamo kot koren njene variance. Velja torej, da je $SE(\widehat{\theta}_n) = \theta\sqrt{1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2}}$.
+	Prej omenjena skripta ocenjene vrednosti cenilk in standardnih napak izpiše v konzolo, so pa zbrane tudi v spodnji tabeli, ki pa vsebuje tudi na dve decimalki zaokrožene vrednosti standardnih napak.
 	
 	\begin{table}[h!]
 		\label{tab: mnvse}
@@ -316,40 +316,52 @@
 		\begin{tabular}{|l|c|c|c|}
 			\hline
 			Eksperiment & kratki & srednji & dolgi \\ \hline
-			Vrednost $\theta$ & $1{,}117394$ & $2{,}075983$ & $3{,}324422$ \\ \hline
+			Vrednost $\widehat{\theta}$ & $1{,}117394$ & $2{,}075983$ & $3{,}324422$ \\ \hline
 			Ocena SE & $0{,}05728327$ & $0{,}0658959$ & $0{,}1451586$ \\ \hline
 		\end{tabular}
 		\caption{Numerične vrednosti MNV cenilke in standardne napake po eksperimentih}
 	\end{table}
 	
-	Izračun standardne napake cenilke je neizogiben in pomemben del vsake statistične analize podatkov. Razlog za to je, ker nam služi kot merilo, kako dobro se naša cenilka prilega dejanskemu parametru, ki ga cenimo glede na dane podatke. Če je standardna napaka velika, vrednosti cenilke močno odstopajo od pričakovane vrednosti cenilke, ki je, v primeru ko je cenilka nepristranska, ravno enaka parametru, ki ga ocenjuje. Iz tega razloga, se načeloma raje dela z nepristranskimi cenilkami. Vseeno enaka intuicija velja tudi za pristranske spremenljivke - večja kot je standardna napaka, slabša je cenilka in manjša kot je standardna napaka, boljša je cenilka.
+	Izračun standardne napake cenilke je neizogiben in pomemben del vsake statistične analize podatkov. Razlog za to je, ker nam služi kot merilo, kako dobro se naša cenilka prilega dejanskemu parametru, ki ga cenimo glede na dane podatke. Če je standardna napaka velika, vrednosti cenilke močno odstopajo od pričakovane vrednosti cenilke, ki je, v primeru ko je cenilka nepristranska, ravno enaka populacijskemu parametru, ki ga ocenjuje. Iz tega razloga, se načeloma raje dela z nepristranskimi cenilkami. Vseeno enaka intuicija velja tudi za pristranske spremenljivke - večja kot je standardna napaka na vzorcu, bolj odstopa cenilka od dejanske vrednosti parametra, ki ga ocenjujemo, za celotno populacijo in manjša kot je standardna napaka, manj cenilka odstopa od dejanske vrednosti parametra.
 	
 	Kot je bilo že prej omenjeno, skripta \textit{SlucajniSprehodiMNV.R} tudi nariše grafe verjetij, ki pripadajo izračunanim ocenam paramatra $\theta$. Na teh grafih je z zeleno črto označena izračunana vrednost $\theta$, okoli nje pa je z rdečima črtkanima premicama označena pripadajoča $SE$-okolica. Skripta sicer grafe izriše enega zraven drugega, tukaj pa bodo priloženi vsak posebej.
 	
 	\begin{figure}[h!]
 		\label{fig: 2Dplot1}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMNV1}
+		\includegraphics[scale = 0.4]{VerjetjeMNV1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v prvem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot2}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMNV2}
+		\includegraphics[scale = 0.4]{VerjetjeMNV2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v drugem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot3}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMNV3}
+		\includegraphics[scale = 0.4]{VerjetjeMNV3}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v tretjem poskusu}
 	\end{figure}
 
+	Skripta dodatno vrne graf, na katerem so narisane vse tri zgoraj prikazane gostote, skupaj z oznakami njihovih pripadajočih vrednosti cenilk $\widehat{\theta}$ in pripadajočimi $SE$-okolicami. Namen tega zadnjega grafa je prikazati, kako izgledajo gostote, ko jih postavimo v isti koordinatni sistem in na podlagi tega omogočiti primerjavo.
+	
+	\begin{figure}[h!]
+		\label{fig: 2Dplot4}
+		\centering
+		\includegraphics[scale = 0.45]{VerjetjeMNV4}
+		\caption{Verjetja za vse ocene cenilke $\theta$, pridobljene po metodi največjega verjetja}
+	\end{figure}
+	
+	Na vsakem grafu verjetja vidimo, da $SE$-okolica pripadajoče izračunane cenilke vsebuje maksimum verjetja, kar nas ne preseneti, saj je to smiselno za cenilko pridobljeno po metodi največjega verjetja. Dodatno opazimo, da verjetja postajajo bolj položna z zaporednimi poskusi. Razlog za to je naraščanje velikosti posameznih meritev v zaporednih poskusih kar poveča numerično vrednost cenilke. Obnašanje grafov gostot je torej popolnoma normalno, saj velja, da večji kot je parameter $\theta$, bolj položen bo graf gostote Rayleighove porazdelitve za ta parameter. 
+	Zaradi razmeroma majhne velikosti standardnih napak lahko sklepamo, da je cenilka $\widehat{\theta}$ pridobljena po metodi največjega verjetna razmeroma dobra cenilka za parameter $\theta$. Seveda jo lahko še izboljšamo, tako da jo popravimo v nepristransko cenilko $\widehat{\theta}^{+}$, ki smo jo izračunali v podpodpoglavju \ref{subsubsect: 2C1}.
+	
 	\subsection{Številska ocena druge cenilke} \label{subsect: 2E}
 	
-	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $SE(\widehat{\theta}_n) = \sqrt{Var(\widehat{\theta}_n)} = \sqrt{\frac{(4-\pi)}{n\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n\pi}}\theta$. Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n\pi}}\widehat{\theta}_n$. Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli.
+	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $SE(\widehat{\theta}_n) = \sqrt{Var(\widehat{\theta}_n)} = \sqrt{\frac{(4-\pi)}{n\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n\pi}}\theta$. Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n\pi}}\widehat{\theta}_n$. Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli skupaj z na dve decimalki zaokroženimi vrednostmi standardnih napak.
 	
 	\begin{table}[h!]
 		\label{tab: mmse}
@@ -364,38 +376,71 @@
 	\end{table}
 
 	Poleg tega skripta tudi izriše graf gostote za ocenjeno cenilko za vsak poskus. Te grafe izriše enega zraven drugega, spodaj pa so grafi prikazani posebej.
-
+	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot1}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMM1}
+		\includegraphics[scale = 0.35]{VerjetjeMM1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v prvem poskusu}
 	\end{figure}
-	filler filler	filler filler	filler filler	filler filler	filler filler	filler filler	filler filler	filler filler	filler filler	filler filler
+	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot2}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMM2}
+		\includegraphics[scale = 0.35]{VerjetjeMM2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v drugem poskusu}
 	\end{figure}
-	filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text
+	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot3}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMM3}
+		\includegraphics[scale = 0.35]{VerjetjeMM3}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v tretjem poskusu}
 	\end{figure}
-	Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text
+	
+	Tudi tukaj pridemo do podobnih sklepov, kot v podpoglavju \ref{subsect: 2D} - $SE$-okolica cenilke vsebuje maksimum gostote in je razmeroma majhna zahvaljujoč majhni standardni napaki cenilke. Standardne napake za to cenilko so v resnici presenetljivo blizu vrednostim standardnih napak pri cenilki pridobljeni z metodo največjega verjetja. V primeru, ko napake zaokrožimo na dve decimalki natančno se razlika pojavi samo v zadnjem poskusu, kjer znaša $0{,}01$. To nam pove, da je tudi cenilka, ki smo jo pridobili po metodi momentov, razmeroma dobra alternativa, še posebej zato, ker jo je veliko lažje izračunati.
+	
+	Dodatno je spodaj ponovno priložen graf na katerem so narisane vse tri gostote, za vizualno primerjavo.
+	\begin{figure}[h!]
+		\label{fig: 2Eplot4}
+		\centering
+		\includegraphics[scale = 0.35]{VerjetjeMM4}
+		\caption{Verjetja za vse ocene cenilke $\theta$, pridobljene po metodi momentov}
+	\end{figure}
+	
 	\subsection{Histogram meritev in grafi gostot cenilk} \label{subsect: 2F}
-	Lorem Ipsum bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	Da se dokončno prepričamo, da sta izračunani cenilki dobri, bomo za vsak poskus narisali histogram meritev in nanj dorisali gostoti za obe cenilki. Pri določanju širine razredov za histograme bomo uporabili modificirano Freedman-Diaconisovo pravilo, po katerem naj bi širina vsakega razreda bila približno $\frac{2{,}6IQR}{\sqrt[3]{n}}$, kjer je $n$ število podatkov, $IQR$ pa njihov interkvartilni razmik. Skripta \textit{SlucajniSprehodiHIST.R} poračuna te širine za vsak eksperiment ter nato izriše pripadajoče histograme skupaj z gostotama obeh cenilki na vrhu. Skripta te grafe tudi izriše, so pa tudi prikazani spodaj.
+	
+	\begin{figure}[h!]
+		\label{fig: 2FHist1}
+		\centering
+		\includegraphics[scale=0.425]{Hist1}
+		\caption{Histogram meritev v prvem poskusu skupaj z gostotama za pripadajoči cenilki.}
+	\end{figure}
+	\begin{figure}[h!]
+		\label{fig: 2FHist2}
+		\centering
+		\includegraphics[scale=0.425]{Hist2}
+		\caption{Histogram meritev v drugem poskusu skupaj z gostotama za pripadajoči cenilki.}
+	\end{figure}	
+	
+	\begin{figure}[h!]
+		\label{fig: 2FHist3}
+		\centering
+		\includegraphics[scale=0.425]{Hist3}
+		\caption{Histogram meritev v tretjem poskusu skupaj z gostotama za pripadajoči cenilki.}
+	\end{figure}
+	
+	Vidimo lahko, da se na vsakem grafu obe gostoti medseboj, sicer z manjšimi odstopanji, razmeroma dobro prilegata. V primeru drugega poskusa, se v resnici skoraj popolnoma prekrivata. Tudi s histogrami je podobno - obe gostoti se prilegata obliki, ki jo tvorijo stolpci historgrama. Lahko torej sklepamo, da bi z večanjem vzorcev proti neskončnosti histogram ">konvergiral"< proti grafu gostote. Dokončno torej zatrdimo, da sta obe cenilki res dobri.
+	
 	\section{Temperature}\label{sect: Temperature}
 	Malo več filler texta o temperaturah, da se slike lepo poravnajo in te fore Lorem Ipsum bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 	\subsection{Preizkus modela $A$ znotraj modela $B$}\label{susect: 3A}
 	gsdfgsdgsdfg
 	\subsection{Akikakejeva informacija modelov}\label{subsect: 3B}
 	gsdfdgsdg
-\begin{thebibliography}{99}
-	\bibitem{bib:Rice} John Rice, \emph{Mathematical Statistics \& Data Analysis}, Duxbury, Berkeley, $2007$.
-	\bibitem{bib:Rayleigh} \emph{Rayleighjeva porazdelitev},~v: Wikipedia,~Prosta enciklopedija, [ogled $14$.~$7$.~$2022$], dostopno na \url{https://sl.wikipedia.org/wiki/Rayleighjeva_porazdelitev}.
-\end{thebibliography}
+	\begin{thebibliography}{3}
+		\bibitem{bib:Rice} John Rice, \emph{Mathematical Statistics \& Data Analysis}, Duxbury, Berkeley, $2007$.
+		\bibitem{bib:Rayleigh} \emph{Rayleighjeva porazdelitev},~v: Wikipedia,~Prosta enciklopedija, [ogled $14$.~$7$.~$2022$], dostopno na \url{https://sl.wikipedia.org/wiki/Rayleighjeva_porazdelitev}.
+	\end{thebibliography}
 \end{document}

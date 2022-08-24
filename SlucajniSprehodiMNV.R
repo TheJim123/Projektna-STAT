@@ -67,29 +67,55 @@ gost3 <- function(r) {
 
 #Za vsak eksperiment še narišemo gostoto porazdelitve
 
-par(mfrow=c(1, 3))
-
 xk <- sort(c(seq(0, 6, 0.001), t1-SE1, t1, t1+SE1))
-xd <- sort(c(seq(0, 8, 0.001), t2-SE2, t2, t2+SE2))
-xs <- sort(c(seq(0, 12, 0.001), t3-SE3, t3, t3+SE3))
+xs <- sort(c(seq(0, 8, 0.001), t2-SE2, t2, t2+SE2))
+xd <- sort(c(seq(0, 12, 0.001), t3-SE3, t3, t3+SE3))
 
-plot(xk, gost1(xk), type="l", main="Gostota razdalj v 1. poskusu", xaxt= "n")
-axis(1, at = sort(c(seq(0, 6, 2), round(t1, 5))), las=2)
-abline(v = t1, color = "green")
+xa <- sort(c(xd, t1-SE1, t1, t1+SE1, t2-SE2, t2, t2+SE2))
+
+par(mfrow=c(2, 2))
+
+plot(xk, gost1(xk), type="l", main="Gostota razdalj v 1. poskusu", xaxt= "n", yaxt = "n", xlab = "", ylab="")
+axis(1, at = sort(c(seq(0, 6, 1), round(t1, 5))), las=2)
+axis(2, at = seq(0, 0.6, 0.01), las=2)
+abline(v = t1, col = "blue")
 abline(v = t1-SE1, col = "red", lty = 2, lwd=1)
 abline(v = t1+SE1, col = "red", lty = 2, lwd=1)
 
-plot(xd, gost2(xd), type="l", main="Gostota razdalj v 2. poskusu", xaxt= "n")
-axis(1, at = sort(c(seq(0, 8, 2), round(t2, 5))), las=2)
-abline(v = t2, color = "green")
+plot(xs, gost2(xs), type="l", main="Gostota razdalj v 2. poskusu", xaxt= "n", yaxt = "n", xlab = "", ylab="")
+axis(1, at = sort(c(seq(0, 10, 1), round(t2, 5))), las=2)
+axis(2, at = seq(0, 0.3, 0.01), las=2)
+abline(v = t2, col = "blue")
 abline(v = t2-SE2, col = "red", lty = 2, lwd=1)
 abline(v = t2+SE2, col = "red", lty = 2, lwd=1)
 
-plot(xs, gost3(xs), type="l", main="Gostota razdalj v 3. poskusu", xaxt= "n")
-axis(1, at = sort(c(seq(0, 12, 2), round(t3, 5))), las=2)
-abline(v = t3, color = "green")
+plot(xd, gost3(xd), type="l", main="Gostota razdalj v 3. poskusu", xaxt = "n", yaxt = "n", xlab = "", ylab="")
+axis(1, at = sort(c(seq(0, 12, 1), round(t3, 5))), las=2)
+axis(2, at = seq(0, 0.2, 0.01), las=2)
+abline(v = t3, col = "blue")
 abline(v = t3-SE3, col = "red", lty = 2, lwd=1)
 abline(v = t3+SE3, col = "red", lty = 2, lwd=1)
+
+plot(xa, gost1(xa), type="l", main="Gostote razdalj v vseh treh poskusih", xaxt= "n", yaxt = "n", xlab = "", ylab="", col="red")
+axis(1, at = sort(c(seq(0, 12, 1), round(t1, 5), round(t2, 5), round(t3, 5))), las=2)
+axis(2, at = seq(0, 0.6, 0.01), las=2)
+
+lines(xa, gost2(xa), type="l", col="green")
+lines(xa, gost3(xa), type="l", col="blue")
+
+abline(v = t1, col = "violet")
+abline(v = t1-SE1, col = "orange", lty = 2, lwd=1)
+abline(v = t1+SE1, col = "orange", lty = 2, lwd=1)
+
+abline(v = t2, col = "violet")
+abline(v = t2-SE2, col = "orange", lty = 2, lwd=1)
+abline(v = t2+SE2, col = "orange", lty = 2, lwd=1)
+
+abline(v = t3, col = "violet")
+abline(v = t3-SE3, col = "orange", lty = 2, lwd=1)
+abline(v = t3+SE3, col = "orange", lty = 2, lwd=1)
+
+legend(x="topright", legend=c("Gostota za I. poskus", "Gostota za II. poskus", "Gostota za III. poskus"), col = c("red", "green", "blue"), lwd=2)
 
 cat("Približek za theta v prvem eksperimentu je", t1, ".")
 cat("Standardna napaka v njem pa znaša",SE1, ".")

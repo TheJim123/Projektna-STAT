@@ -6,12 +6,12 @@
 \contentsline {section}{\numberline {2}Slučajni sprehod}{9}{}%
 \contentsline {subsection}{\numberline {2.1}Cenilka za $\theta $ po metodi največjega verjetja}{10}{}%
 \contentsline {subsection}{\numberline {2.2}Cenilka za $\theta $ po metodi momentov}{11}{}%
-\contentsline {subsection}{\numberline {2.3}Asimptotični $MSE$ cenilk}{12}{}%
+\contentsline {subsection}{\numberline {2.3}Asimptotični $MSE$ cenilk}{11}{}%
 \contentsline {subsubsection}{\numberline {2.3.1}MSE cenilke po metodi največjega verjetja}{12}{}%
 \contentsline {subsubsection}{\numberline {2.3.2}MSE cenilke po metodi momentov}{13}{}%
 \contentsline {subsection}{\numberline {2.4}Ševilska ocena prve cenilke}{13}{}%
-\contentsline {subsection}{\numberline {2.5}Številska ocena druge cenilke}{15}{}%
-\contentsline {subsection}{\numberline {2.6}Histogram meritev in grafi gostot cenilk}{16}{}%
-\contentsline {section}{\numberline {3}Temperature}{18}{}%
-\contentsline {subsection}{\numberline {3.1}Preizkus modela $A$ znotraj modela $B$}{18}{}%
-\contentsline {subsection}{\numberline {3.2}Akikakejeva informacija modelov}{18}{}%
+\contentsline {subsection}{\numberline {2.5}Številska ocena druge cenilke}{16}{}%
+\contentsline {subsection}{\numberline {2.6}Histogram meritev in grafi gostot cenilk}{18}{}%
+\contentsline {section}{\numberline {3}Temperature}{20}{}%
+\contentsline {subsection}{\numberline {3.1}Preizkus modela $A$ znotraj modela $B$}{20}{}%
+\contentsline {subsection}{\numberline {3.2}Akikakejeva informacija modelov}{20}{}%
