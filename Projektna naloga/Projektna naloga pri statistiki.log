@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  24 AUG 2022 21:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  26 AUG 2022 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1012,64 +1012,69 @@ Package pdftex.def Info: Hist3.jpg  used on input line 430.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18 <./VerjetjeMM4.jpg> <./Hist1.jpg>] [19 <./Hist2.jpg> <./Hist3.jpg>]
+<Scatter3.jpg, id=102, 502.12593pt x 498.36188pt>
+File: Scatter3.jpg Graphic file (type jpg)
+<use Scatter3.jpg>
+Package pdftex.def Info: Scatter3.jpg  used on input line 443.
+(pdftex.def)             Requested size: 200.84682pt x 199.34122pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-44.
+55.
 
 (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 []\T1/lmr/m/it/10 Rayleighjeva po-raz-de-li-tev\T1/lmr/m/n/10 , v: Wi-ki-pe-dia
 , Pro-sta en-ci-klo-pe-dija,
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 444--445
+Underfull \hbox (badness 2435) in paragraph at lines 455--456
 \T1/lmr/m/n/10 [ogled $\OT1/lmr/m/n/10 14$\T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 7$\
 T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 2022$\T1/lmr/m/n/10 ], do-sto-pno na $\T1/lmtt
 /m/n/10 https : / / sl . wikipedia . org / wiki /
  []
 
-[20] (Projektna naloga pri statistiki.aux) ) 
+[20 <./Scatter3.jpg>] [21] (Projektna naloga pri statistiki.aux) ) 
 Here is how much of TeX's memory you used:
- 21752 strings out of 477992
- 466413 string characters out of 2825578
- 804950 words of memory out of 3000000
- 40128 multiletter control sequences out of 15000+600000
+ 21765 strings out of 477992
+ 466635 string characters out of 2825578
+ 804994 words of memory out of 3000000
+ 40141 multiletter control sequences out of 15000+600000
  555801 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,89p,866b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Uporabnik/AppData/Local/P
-rograms/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppData/Local/P
-rograms/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporabnik/AppData/Loc
-al/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporabnik/AppData/Loc
-al/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Uporabnik/AppData
-/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/Uporabnik/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Uporabnik
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Upora
-bnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Up
-orabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/User
-s/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/
-Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb>
-<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.p
-fb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi
-7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
-m/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Projektna naloga pri statistiki.pdf" (20 pages, 1328803 byte
+{C:/Users/Upo
+rabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Upo
+rabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users
+/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users
+/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/U
+sers/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<
+C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
+fb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx
+12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmbx9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmex10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmmi10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmmi9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Projektna naloga pri statistiki.pdf" (21 pages, 1369165 byte
 s).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
+ 203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

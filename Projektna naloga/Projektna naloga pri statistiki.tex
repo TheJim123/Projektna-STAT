@@ -434,7 +434,18 @@
 	Vidimo lahko, da se na vsakem grafu obe gostoti medseboj, sicer z manjšimi odstopanji, razmeroma dobro prilegata. V primeru drugega poskusa, se v resnici skoraj popolnoma prekrivata. Tudi s histogrami je podobno - obe gostoti se prilegata obliki, ki jo tvorijo stolpci historgrama. Lahko torej sklepamo, da bi z večanjem vzorcev proti neskončnosti histogram ">konvergiral"< proti grafu gostote. Dokončno torej zatrdimo, da sta obe cenilki res dobri.
 	
 	\section{Temperature}\label{sect: Temperature}
-	Malo več filler texta o temperaturah, da se slike lepo poravnajo in te fore Lorem Ipsum bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	V datoteki \textit{Temp\_LJ.csv} imamo podane povprečne mesečne temperature od leta $1986$ do $2020$. Glede na dane podatke bi želeli uporabiti model, ki bo čim bolje napovedal temperature v prihodnosti. 
+	Predlagana sta nam dva modela. Model $A$ vključuje linearen trend in sinusno nihanje s periodo enega leta, model $B$ pa vključuje linearen trend in člene, od katerih vsak spreminja temperaturo za svoj mesec. S pomočjo programskega jezika $R$ narišemo graf temperatur v odvisnosti od meseca. Koda za izris tega grafa se nahaja v skripti \textit{Temperature.R}.
+	
+	\begin{figure}[h!]
+		\label{fig: Scatter3}
+		\centering
+		\includegraphics[scale = 0.4]{Scatter3}
+		\caption{Razpršen graf povprečnih mesečnih temperatur glede na mesec.}
+	\end{figure}
+
+	Opazimo, da se v podatkih res skriva nek trend, zato je seveda smiselno, da premislimo kateri model bi bil za to najbolj primeren. Seveda sta glavna kandidata modela $A$ in $B$. Le ta bosta predmet obravnave v nadaljevanju tega poglavja. V prvem podpoglavju bomo preizkusili model $A$ znotraj modela $B$, v drugem pa bomo poračunali Akikakijevo informacijo za oba modela.
+	
 	\subsection{Preizkus modela $A$ znotraj modela $B$}\label{susect: 3A}
 	gsdfgsdgsdfg
 	\subsection{Akikakejeva informacija modelov}\label{subsect: 3B}
