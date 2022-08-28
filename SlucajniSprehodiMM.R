@@ -1,5 +1,5 @@
 #Nastavimo mesto datoteke (Po potrebi spremenite na mesto, kamor ste shranili datoteke)
-setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
+#Npr. setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
 
 #Naložimo podatke eksperimentov
 kratki <- read.csv("Kromatin_kratki.csv")

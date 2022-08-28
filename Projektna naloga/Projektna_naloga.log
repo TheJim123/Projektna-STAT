@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  26 AUG 2022 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  28 AUG 2022 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Projektna naloga pri statistiki.tex"
-(Projektna naloga pri statistiki.tex
+**./Projektna_naloga.tex
+(Projektna_naloga.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-05>
 (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -763,8 +763,8 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 64
 (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(Projektna naloga pri statistiki.aux)
-\openout1 = `"Projektna naloga pri statistiki.aux"'.
+(Projektna_naloga.aux)
+\openout1 = `Projektna_naloga.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
@@ -861,220 +861,258 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [1
 
 {C:/Users/Uporabnik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2] (Projektna naloga pri statistiki.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 69.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 69.
+
+[2] (Projektna_naloga.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
 )
 \tf@toc=\write4
-\openout4 = `"Projektna naloga pri statistiki.toc"'.
+\openout4 = `Projektna_naloga.toc'.
 
- [3]
-<TabelaSample1.jpg, id=24, 505.89pt x 503.63156pt>
+ (Projektna_naloga.lof [3])
+\tf@lof=\write5
+\openout5 = `Projektna_naloga.lof'.
+
+ (Projektna_naloga.lot)
+\tf@lot=\write6
+\openout6 = `Projektna_naloga.lot'.
+
+
+[4]
+Overfull \hbox (4.90544pt too wide) in paragraph at lines 80--95
+\T1/lmr/m/n/10 klju£no to, da je de-lovno oko-lje pra-vilno na-sta-vljeno na ma
+po \T1/lmr/m/it/10 Po-datki_in_skripte\T1/lmr/m/n/10 .
+ []
+
+<TabelaSample1.jpg, id=33, 505.89pt x 503.63156pt>
 File: TabelaSample1.jpg Graphic file (type jpg)
 <use TabelaSample1.jpg>
-Package pdftex.def Info: TabelaSample1.jpg  used on input line 99.
+Package pdftex.def Info: TabelaSample1.jpg  used on input line 101.
 (pdftex.def)             Requested size: 177.06415pt x 176.27368pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 100.
- [4 <./TabelaSample1.jpg>]
-[5]
-<SkatlezbrkiB.jpg, id=33, 819.8128pt x 656.4525pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5] [6 <./TabelaSample1.jpg>]
+<SkatlezbrkiB.jpg, id=41, 819.8128pt x 656.4525pt>
 File: SkatlezbrkiB.jpg Graphic file (type jpg)
 <use SkatlezbrkiB.jpg>
-Package pdftex.def Info: SkatlezbrkiB.jpg  used on input line 147.
+Package pdftex.def Info: SkatlezbrkiB.jpg  used on input line 149.
 (pdftex.def)             Requested size: 348.42207pt x 278.99362pt.
 
-Overfull \hbox (3.42207pt too wide) in paragraph at lines 147--148
+Overfull \hbox (3.42207pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
-[6 <./SkatlezbrkiB.jpg>]
-<LepseSkatlezbrkiB.jpg, id=38, 817.55438pt x 651.93562pt>
+[7 <./SkatlezbrkiB.jpg>]
+<LepseSkatlezbrkiB.jpg, id=47, 817.55438pt x 651.93562pt>
 File: LepseSkatlezbrkiB.jpg Graphic file (type jpg)
 <use LepseSkatlezbrkiB.jpg>
-Package pdftex.def Info: LepseSkatlezbrkiB.jpg  used on input line 156.
+Package pdftex.def Info: LepseSkatlezbrkiB.jpg  used on input line 158.
 (pdftex.def)             Requested size: 327.01596pt x 260.76962pt.
- [7 <./LepseSkatlezbrkiB.jpg>]
-<QQVzorec1.jpg, id=44, 502.12593pt x 502.87875pt>
+ [8 <./LepseSkatlezbrkiB.jpg>]
+<QQVzorec1.jpg, id=51, 502.12593pt x 502.87875pt>
 File: QQVzorec1.jpg Graphic file (type jpg)
 <use QQVzorec1.jpg>
-Package pdftex.def Info: QQVzorec1.jpg  used on input line 190.
+Package pdftex.def Info: QQVzorec1.jpg  used on input line 192.
 (pdftex.def)             Requested size: 251.06235pt x 251.43875pt.
- [8 <./QQVzorec1.jpg>]
-Overfull \hbox (18.8404pt too wide) in paragraph at lines 225--225
+ [9 <./QQVzorec1.jpg>]
+Overfull \hbox (18.8404pt too wide) in paragraph at lines 227--227
 \T1/lmr/m/n/10 vani v da-to-te-kah \T1/lmr/m/it/10 Kro-ma-tin_kratki.csv\T1/lmr
 /m/n/10 , \T1/lmr/m/it/10 Kro-ma-tin_srednji.csv \T1/lmr/m/n/10 in \T1/lmr/m/it
 /10 Kro-ma-tin_dolgi.csv\T1/lmr/m/n/10 .
  []
 
-[9]
-Overfull \hbox (9.35571pt too wide) detected at line 244
+[10]
+Overfull \hbox (9.35571pt too wide) detected at line 246
 []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^R\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 x[]; 
 [] ; x[]\OT1/lmr/m/n/10 ) = [] [][] \OMS/lmsy/m/n/10 ^^@ [][] \OT1/lmr/m/n/10 =
  [] [][] \OMS/lmsy/m/n/10 ^^@ [][] \OT1/lmr/m/n/10 = [] [][][] \OMS/lmsy/m/n/10
  ^^@ [][]
  []
 
-[10]
-Overfull \hbox (9.76527pt too wide) detected at line 249
+
+Overfull \hbox (9.76527pt too wide) detected at line 251
 []\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 3)[] + [] = []([] + 1) =
  (\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 2)[] \OML/lmm/m/it/10 < \OT1/lmr/m/n/10 0
 
  []
 
-[11]
-Overfull \hbox (21.47913pt too wide) detected at line 284
+[11] [12]
+Overfull \hbox (21.47913pt too wide) detected at line 286
 \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [[]] = [][] \OML/lmm/m/it/10 u[][]e[]\OT1/lmr
 /m/n/10 2\OML/lmm/m/it/10 ^^R[] du \OT1/lmr/m/n/10 = [] [][] \OML/lmm/m/it/10 u
 []e[] du \OT1/lmr/m/n/10 = [][]
  []
 
-[12] [13]
-<VerjetjeMNV1.jpg, id=71, 502.12593pt x 499.11469pt>
+[13] [14]
+<VerjetjeMNV1.jpg, id=75, 502.12593pt x 499.11469pt>
 File: VerjetjeMNV1.jpg Graphic file (type jpg)
 <use VerjetjeMNV1.jpg>
-Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 332.
+Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 334.
 (pdftex.def)             Requested size: 200.84682pt x 199.64232pt.
-<VerjetjeMNV2.jpg, id=72, 499.8675pt x 497.60907pt>
+<VerjetjeMNV2.jpg, id=76, 499.8675pt x 497.60907pt>
 File: VerjetjeMNV2.jpg Graphic file (type jpg)
 <use VerjetjeMNV2.jpg>
-Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 339.
+Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 341.
 (pdftex.def)             Requested size: 199.94345pt x 199.0401pt.
-<VerjetjeMNV3.jpg, id=73, 499.11469pt x 497.60907pt>
+<VerjetjeMNV3.jpg, id=77, 499.11469pt x 497.60907pt>
 File: VerjetjeMNV3.jpg Graphic file (type jpg)
 <use VerjetjeMNV3.jpg>
-Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 346.
+Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 348.
 (pdftex.def)             Requested size: 199.64232pt x 199.0401pt.
- [14 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
-<VerjetjeMNV4.jpg, id=78, 499.11469pt x 499.11469pt>
+ [15 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
+<VerjetjeMNV4.jpg, id=81, 499.11469pt x 499.11469pt>
 File: VerjetjeMNV4.jpg Graphic file (type jpg)
 <use VerjetjeMNV4.jpg>
-Package pdftex.def Info: VerjetjeMNV4.jpg  used on input line 355.
+Package pdftex.def Info: VerjetjeMNV4.jpg  used on input line 357.
 (pdftex.def)             Requested size: 224.59952pt x 224.59952pt.
- [15 <./VerjetjeMNV3.jpg> <./VerjetjeMNV4.jpg>]
-<VerjetjeMM1.jpg, id=82, 501.37312pt x 500.62032pt>
+ [16 <./VerjetjeMNV3.jpg> <./VerjetjeMNV4.jpg>]
+<VerjetjeMM1.jpg, id=85, 501.37312pt x 500.62032pt>
 File: VerjetjeMM1.jpg Graphic file (type jpg)
 <use VerjetjeMM1.jpg>
-Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 383.
+Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 385.
 (pdftex.def)             Requested size: 175.48322pt x 175.21973pt.
-<VerjetjeMM2.jpg, id=83, 499.8675pt x 499.8675pt>
+<VerjetjeMM2.jpg, id=86, 499.8675pt x 499.8675pt>
 File: VerjetjeMM2.jpg Graphic file (type jpg)
 <use VerjetjeMM2.jpg>
-Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 390.
+Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 392.
 (pdftex.def)             Requested size: 174.95624pt x 174.95624pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<VerjetjeMM3.jpg, id=84, 502.87875pt x 502.12593pt>
+<VerjetjeMM3.jpg, id=87, 502.87875pt x 502.12593pt>
 File: VerjetjeMM3.jpg Graphic file (type jpg)
 <use VerjetjeMM3.jpg>
-Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 397.
+Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 399.
 (pdftex.def)             Requested size: 176.0102pt x 175.7467pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <./VerjetjeMM1.jpg>]
-<VerjetjeMM4.jpg, id=88, 501.37312pt x 501.37312pt>
+[17 <./VerjetjeMM1.jpg>]
+<VerjetjeMM4.jpg, id=91, 501.37312pt x 501.37312pt>
 File: VerjetjeMM4.jpg Graphic file (type jpg)
 <use VerjetjeMM4.jpg>
-Package pdftex.def Info: VerjetjeMM4.jpg  used on input line 407.
+Package pdftex.def Info: VerjetjeMM4.jpg  used on input line 409.
 (pdftex.def)             Requested size: 175.48322pt x 175.48322pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./VerjetjeMM2.jpg> <./VerjetjeMM3.jpg>]
-<Hist1.jpg, id=92, 505.13719pt x 501.37312pt>
+[18 <./VerjetjeMM2.jpg> <./VerjetjeMM3.jpg>]
+<Hist1.jpg, id=95, 505.13719pt x 501.37312pt>
 File: Hist1.jpg Graphic file (type jpg)
 <use Hist1.jpg>
-Package pdftex.def Info: Hist1.jpg  used on input line 417.
+Package pdftex.def Info: Hist1.jpg  used on input line 419.
 (pdftex.def)             Requested size: 214.68431pt x 213.08458pt.
-<Hist2.jpg, id=93, 503.63156pt x 502.87875pt>
+<Hist2.jpg, id=96, 503.63156pt x 502.87875pt>
 File: Hist2.jpg Graphic file (type jpg)
 <use Hist2.jpg>
-Package pdftex.def Info: Hist2.jpg  used on input line 423.
+Package pdftex.def Info: Hist2.jpg  used on input line 425.
 (pdftex.def)             Requested size: 214.04442pt x 213.72447pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Hist3.jpg, id=94, 504.38437pt x 500.62032pt>
+<Hist3.jpg, id=97, 504.38437pt x 500.62032pt>
 File: Hist3.jpg Graphic file (type jpg)
 <use Hist3.jpg>
-Package pdftex.def Info: Hist3.jpg  used on input line 430.
+Package pdftex.def Info: Hist3.jpg  used on input line 432.
 (pdftex.def)             Requested size: 214.36436pt x 212.76463pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18 <./VerjetjeMM4.jpg> <./Hist1.jpg>] [19 <./Hist2.jpg> <./Hist3.jpg>]
-<Scatter3.jpg, id=102, 502.12593pt x 498.36188pt>
+[19 <./VerjetjeMM4.jpg> <./Hist1.jpg>] [20 <./Hist2.jpg> <./Hist3.jpg>]
+<Scatter3.jpg, id=105, 502.12593pt x 498.36188pt>
 File: Scatter3.jpg Graphic file (type jpg)
 <use Scatter3.jpg>
-Package pdftex.def Info: Scatter3.jpg  used on input line 443.
+Package pdftex.def Info: Scatter3.jpg  used on input line 445.
 (pdftex.def)             Requested size: 200.84682pt x 199.34122pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-55.
+
+[21 <./Scatter3.jpg>] [22]
+Overfull \hbox (3.13234pt too wide) in paragraph at lines 561--562
+\T1/lmr/m/n/10 Kon£no imamo vse, kar po-tre-bu-jemo, da pre-iz-ku-simo mo-del $
+\OML/lmm/m/it/10 A$ \T1/lmr/m/n/10 zno-traj $\OML/lmm/m/it/10 B$\T1/lmr/m/n/10 
+. Skripta
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23]
+<PrimerjavaModelov.jpg, id=116, 639.89063pt x 542.025pt>
+File: PrimerjavaModelov.jpg Graphic file (type jpg)
+<use PrimerjavaModelov.jpg>
+Package pdftex.def Info: PrimerjavaModelov.jpg  used on input line 594.
+(pdftex.def)             Requested size: 255.9517pt x 216.80615pt.
+ [24 <./PrimerjavaModelov.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
+02.
 
 (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 []\T1/lmr/m/it/10 Rayleighjeva po-raz-de-li-tev\T1/lmr/m/n/10 , v: Wi-ki-pe-dia
 , Pro-sta en-ci-klo-pe-dija,
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 455--456
-\T1/lmr/m/n/10 [ogled $\OT1/lmr/m/n/10 14$\T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 7$\
-T1/lmr/m/n/10 . $\OT1/lmr/m/n/10 2022$\T1/lmr/m/n/10 ], do-sto-pno na $\T1/lmtt
-/m/n/10 https : / / sl . wikipedia . org / wiki /
+Underfull \hbox (badness 2435) in paragraph at lines 602--603
+\T1/lmr/m/n/10 [ogled 14. 7. 2022], do-sto-pno na $\T1/lmtt/m/n/10 https : / / 
+sl . wikipedia . org / wiki /
  []
 
-[20 <./Scatter3.jpg>] [21] (Projektna naloga pri statistiki.aux) ) 
+[25] (Projektna_naloga.aux) ) 
 Here is how much of TeX's memory you used:
- 21765 strings out of 477992
- 466635 string characters out of 2825578
- 804994 words of memory out of 3000000
- 40141 multiletter control sequences out of 15000+600000
+ 21792 strings out of 477992
+ 467027 string characters out of 2825578
+ 814047 words of memory out of 3000000
+ 40162 multiletter control sequences out of 15000+600000
  555801 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,89p,866b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Upo
-rabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Upo
-rabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users
-/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users
-/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/U
-sers/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<
-C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
-fb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx
-12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmbx9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmex10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmmi10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmmi9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Projektna naloga pri statistiki.pdf" (21 pages, 1369165 byte
-s).
+ 84i,16n,89p,1089b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/
+fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/
+fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Uporabnik/AppData/Local/Programs/MiK
+TeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporabnik/AppData/Local/Programs
+/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporabnik/AppData/Local/Programs
+/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Uporabnik/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Uporabnik/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Uporabnik/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Uporabnik/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Uporabnik/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Uporabnik
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Upora
+bnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Up
+orabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users
+/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Us
+ers/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:
+/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
+<C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.p
+fb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mr5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr6.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmsy6.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmsy9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Uporabnik/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Projektna_naloga.pdf (25 pages, 1606637 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
+ 242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

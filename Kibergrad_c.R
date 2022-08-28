@@ -1,5 +1,5 @@
-#Nastavimo mesto
-setwd("C:/Users/Jimmy/Desktop/faks/3. letnik/STAT/Projektna-STAT")
+#Nastavimo mesto, kjer so shranjene datoteke
+#Npr. setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
 
 #Naložimo datoteko Kibergrad v dataframe
 

@@ -1,7 +1,5 @@
 #Nastavimo lokacijo na mapo, ki vsebuje nalogo
-#setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
-setwd("C:/Users/Jimmy/Desktop/faks/3. letnik/STAT/Projektna-STAT")
-
+#Npr. setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
 #Po potrebi naložimo knjižnjico dplyr z ukazom install.packages("dplyr")
 
 library(dplyr)

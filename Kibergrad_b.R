@@ -1,12 +1,12 @@
-# Za delovanje skripte sta potrebna paketa "dplyr" in "ggpubr"
-# install.packages("dplyr", "ggpubr")
+#Za delovanje skripte sta potrebna paketa "dplyr" in "ggpubr"
+install.packages("dplyr")
+install.packages("ggpubr")
+
 library("dplyr")
 library("ggpubr")
 
 #Nastavimo lokacijo na mapo, v kateri je shranjena naloga
-
-#setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
-setwd("C:/Users/Jimmy/Desktop/faks/3. letnik/STAT/Projektna-STAT")
+#Npr. setwd("C:/Users/Uporabnik/Documents/GitHub/STAT")
 
 #Vzorci "KibergradVzorec1.csv", "KibergradVzorec2.csv", ... "KibergradVzorec5.csv" 
 #so bili pridobljeni preko vzorčenja v LibreOffice Calc
@@ -41,7 +41,6 @@ LepDohodek <- LepiPodatki$DOHODEK
 LepVzorec <- LepiPodatki$VZOREC
 
 #boxplot(Dohodek~Vzorec, data = Podatki, main="Škatle z brki za dohodke družin tipa 1 glede na vzorec",yaxp = c(0, 500000, 25), xlab = "Vzorec", ylab = "Dohodek")
-
 boxplot(LepDohodek~LepVzorec, data = LepiPodatki, main="Škatle z brki za dohodke družin tipa 1 glede na vzorec",yaxp = c(0, 250000, 25), xlab = "Vzorec", ylab = "Dohodek")
 
 summary(filter(vzorec1, TIP == 1 & DOHODEK <= 250000)$DOHODEK)
@@ -65,10 +64,4 @@ IQR(filter(vzorec5, TIP == 1 & DOHODEK <= 250000)$DOHODEK)
 sd(filter(vzorec5, TIP == 1 & DOHODEK <= 250000)$DOHODEK)
 
 #Preverimo, ali je dohodek porazdeljen normalno
-
 #ggqqplot(filter(vzorec1, TIP == 1 & DOHODEK <= 250000)$DOHODEK, main = "Q-Q graf za dohodke družin tipa 1 v vzorcu 1")
-
-#Vidimo, da vrednosti močno odstopajo od diagonale. Dodatno
-#preverimo s Shapiro-Wilkovim testom
-
-shapiro.test(filter(vzorec1, TIP == 1 & DOHODEK <= 250000)$DOHODEK)
