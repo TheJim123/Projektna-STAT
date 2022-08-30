@@ -13,21 +13,21 @@ n1 <- nrow(kratki)
 x1 <- kratki[, 1]
 t1 <- sqrt(2/pi)*mean(x1)
 
-SE1 <- sqrt((4 - pi)/(n1 * pi))*t1
+SE1 <- sqrt((4 - pi)/(n1^2 * pi))*t1
 
 #Drugi eksperiment
 n2 <- nrow(srednji)
 x2 <- srednji[, 1]
 t2 <- sqrt(2/pi)*mean(x2)
 
-SE2 <- sqrt((4 - pi)/(n2 * pi))*t2
+SE2 <- sqrt((4 - pi)/(n2^2 * pi))*t2
 
 #Tretji eksperiment
 n3 <- nrow(dolgi)
 x3 <- dolgi[, 1]
 t3 <- sqrt(2/pi)*mean(x3)
 
-SE3 <- sqrt((4 - pi)/(n3 * pi))*t3
+SE3 <- sqrt((4 - pi)/(n3^2 * pi))*t3
 
 #Zapišimo ocenjene gostote porazdelitve
 

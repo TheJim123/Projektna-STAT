@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  28 AUG 2022 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  30 AUG 2022 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -951,56 +951,60 @@ Overfull \hbox (21.47913pt too wide) detected at line 286
  []
 
 [13] [14]
-<VerjetjeMNV1.jpg, id=75, 502.12593pt x 499.11469pt>
+<VerjetjeMNV1.jpg, id=75, 505.13719pt x 502.87875pt>
 File: VerjetjeMNV1.jpg Graphic file (type jpg)
 <use VerjetjeMNV1.jpg>
 Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 334.
-(pdftex.def)             Requested size: 200.84682pt x 199.64232pt.
-<VerjetjeMNV2.jpg, id=76, 499.8675pt x 497.60907pt>
+(pdftex.def)             Requested size: 189.42598pt x 188.57906pt.
+<VerjetjeMNV2.jpg, id=76, 502.87875pt x 501.37312pt>
 File: VerjetjeMNV2.jpg Graphic file (type jpg)
 <use VerjetjeMNV2.jpg>
 Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 341.
-(pdftex.def)             Requested size: 199.94345pt x 199.0401pt.
-<VerjetjeMNV3.jpg, id=77, 499.11469pt x 497.60907pt>
+(pdftex.def)             Requested size: 188.57906pt x 188.01445pt.
+<VerjetjeMNV3.jpg, id=77, 502.12593pt x 501.37312pt>
 File: VerjetjeMNV3.jpg Graphic file (type jpg)
 <use VerjetjeMNV3.jpg>
 Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 348.
-(pdftex.def)             Requested size: 199.64232pt x 199.0401pt.
- [15 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
-<VerjetjeMNV4.jpg, id=81, 499.11469pt x 499.11469pt>
-File: VerjetjeMNV4.jpg Graphic file (type jpg)
-<use VerjetjeMNV4.jpg>
-Package pdftex.def Info: VerjetjeMNV4.jpg  used on input line 357.
-(pdftex.def)             Requested size: 224.59952pt x 224.59952pt.
- [16 <./VerjetjeMNV3.jpg> <./VerjetjeMNV4.jpg>]
-<VerjetjeMM1.jpg, id=85, 501.37312pt x 500.62032pt>
-File: VerjetjeMM1.jpg Graphic file (type jpg)
-<use VerjetjeMM1.jpg>
-Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 385.
-(pdftex.def)             Requested size: 175.48322pt x 175.21973pt.
-<VerjetjeMM2.jpg, id=86, 499.8675pt x 499.8675pt>
-File: VerjetjeMM2.jpg Graphic file (type jpg)
-<use VerjetjeMM2.jpg>
-Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 392.
-(pdftex.def)             Requested size: 174.95624pt x 174.95624pt.
+(pdftex.def)             Requested size: 188.29675pt x 188.01445pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<VerjetjeMM3.jpg, id=87, 502.87875pt x 502.12593pt>
+[15 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
+<VerjetjeMNV4.jpg, id=81, 502.12593pt x 502.12593pt>
+File: VerjetjeMNV4.jpg Graphic file (type jpg)
+<use VerjetjeMNV4.jpg>
+Package pdftex.def Info: VerjetjeMNV4.jpg  used on input line 357.
+(pdftex.def)             Requested size: 175.7467pt x 175.7467pt.
+ [16 <./VerjetjeMNV3.jpg> <./VerjetjeMNV4.jpg>]
+<VerjetjeMM1.jpg, id=85, 585.68813pt x 534.49687pt>
+File: VerjetjeMM1.jpg Graphic file (type jpg)
+<use VerjetjeMM1.jpg>
+Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 385.
+(pdftex.def)             Requested size: 234.27109pt x 213.79495pt.
+<VerjetjeMM2.jpg, id=86, 736.25063pt x 532.99126pt>
+File: VerjetjeMM2.jpg Graphic file (type jpg)
+<use VerjetjeMM2.jpg>
+Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 392.
+(pdftex.def)             Requested size: 239.27861pt x 173.22011pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<VerjetjeMM3.jpg, id=87, 584.93532pt x 533.74406pt>
 File: VerjetjeMM3.jpg Graphic file (type jpg)
 <use VerjetjeMM3.jpg>
 Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 399.
-(pdftex.def)             Requested size: 176.0102pt x 175.7467pt.
+(pdftex.def)             Requested size: 204.73042pt x 186.81322pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <./VerjetjeMM1.jpg>]
-<VerjetjeMM4.jpg, id=91, 501.37312pt x 501.37312pt>
+<VerjetjeMM4.jpg, id=91, 585.68813pt x 533.74406pt>
 File: VerjetjeMM4.jpg Graphic file (type jpg)
 <use VerjetjeMM4.jpg>
 Package pdftex.def Info: VerjetjeMM4.jpg  used on input line 409.
-(pdftex.def)             Requested size: 175.48322pt x 175.48322pt.
+(pdftex.def)             Requested size: 204.99391pt x 186.81322pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1010,12 +1014,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Hist1.jpg Graphic file (type jpg)
 <use Hist1.jpg>
 Package pdftex.def Info: Hist1.jpg  used on input line 419.
-(pdftex.def)             Requested size: 214.68431pt x 213.08458pt.
+(pdftex.def)             Requested size: 202.05128pt x 200.54568pt.
 <Hist2.jpg, id=96, 503.63156pt x 502.87875pt>
 File: Hist2.jpg Graphic file (type jpg)
 <use Hist2.jpg>
 Package pdftex.def Info: Hist2.jpg  used on input line 425.
-(pdftex.def)             Requested size: 214.04442pt x 213.72447pt.
+(pdftex.def)             Requested size: 201.44905pt x 201.14793pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1024,7 +1028,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Hist3.jpg Graphic file (type jpg)
 <use Hist3.jpg>
 Package pdftex.def Info: Hist3.jpg  used on input line 432.
-(pdftex.def)             Requested size: 214.36436pt x 212.76463pt.
+(pdftex.def)             Requested size: 201.75017pt x 200.24457pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1110,7 +1114,7 @@ onts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/lm/lmsy9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Uporabnik/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Projektna_naloga.pdf (25 pages, 1606637 bytes).
+Output written on Projektna_naloga.pdf (25 pages, 1608156 bytes).
 PDF statistics:
  242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

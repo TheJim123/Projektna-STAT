@@ -309,7 +309,7 @@
 	
 	\subsection{Ševilska ocena prve cenilke} \label{subsect: 2D}
 	
-	Številsko oceno cenilke za vsak eksperiment izvedemo s pomočjo skripte \textit{SlucajniSprehodiMNV.R}. Ta ob zagonu poračuna številske vrednosti cenilke, oceni standardno napako vsake cenilke ter izriše pripadajoče grafe gostot za vsak eksperiment in graf na katerem so prikazani vsi trije grafi. Pri tem standardno napako $SE(\widehat{\theta}_n)$ cenilke pridobljene po metodi največjega verjetja izračunamo kot koren njene variance. Velja torej, da je $SE(\widehat{\theta}_n) = \theta\sqrt{1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2}}$.
+	Številsko oceno cenilke za vsak eksperiment izvedemo s pomočjo skripte \textit{SlucajniSprehodiMNV.R}. Ta ob zagonu poračuna številske vrednosti cenilke, oceni standardno napako vsake cenilke ter izriše pripadajoče grafe gostot za vsak eksperiment in graf na katerem so prikazani vsi trije grafi. Pri tem standardno napako $SE(\widehat{\theta}_n)$ cenilke pridobljene po metodi največjega verjetja izračunamo kot $\sqrt{\frac{Var(\widehat{\theta}_n)}{n}}$. Velja torej, da je $SE(\widehat{\theta}_n) = \frac{\theta}{\sqrt{n}}\sqrt{1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2}}$.
 	Prej omenjena skripta ocenjene vrednosti cenilk in standardnih napak izpiše v konzolo, so pa zbrane tudi v spodnji tabeli, ki pa vsebuje tudi na dve decimalki zaokrožene vrednosti standardnih napak.
 	
 	\begin{table}[h!]
@@ -319,7 +319,7 @@
 			\hline
 			Eksperiment & kratki & srednji & dolgi \\ \hline
 			Vrednost $\widehat{\theta}$ & $1{,}117394$ & $2{,}075983$ & $3{,}324422$ \\ \hline
-			Ocena SE & $0{,}05728327$ & $0{,}0658959$ & $0{,}1451586$ \\ \hline
+			Ocena SE & $0{,}00587714$ & $0{,}004184394$ & $0{,}01268257$ \\ \hline
 		\end{tabular}
 		\caption{Numerične vrednosti MNV cenilke in standardne napake po eksperimentih}
 	\end{table}
@@ -331,21 +331,21 @@
 	\begin{figure}[h!]
 		\label{fig: 2Dplot1}
 		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMNV1}
+		\includegraphics[scale = 0.375]{VerjetjeMNV1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v prvem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot2}
 		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMNV2}
+		\includegraphics[scale = 0.375]{VerjetjeMNV2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v drugem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot3}
 		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMNV3}
+		\includegraphics[scale = 0.375]{VerjetjeMNV3}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v tretjem poskusu}
 	\end{figure}
 
@@ -354,16 +354,16 @@
 	\begin{figure}[h!]
 		\label{fig: 2Dplot4}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMNV4}
+		\includegraphics[scale = 0.35]{VerjetjeMNV4}
 		\caption{Verjetja za vse ocene cenilke $\theta$, pridobljene po metodi največjega verjetja}
 	\end{figure}
 	
-	Na vsakem grafu verjetja vidimo, da $SE$-okolica pripadajoče izračunane cenilke vsebuje maksimum verjetja, kar nas ne preseneti, saj je to smiselno za cenilko pridobljeno po metodi največjega verjetja. Dodatno opazimo, da verjetja postajajo bolj položna z zaporednimi poskusi. Razlog za to je naraščanje velikosti posameznih meritev v zaporednih poskusih kar poveča numerično vrednost cenilke. Obnašanje grafov gostot je torej popolnoma normalno, saj velja, da večji kot je parameter $\theta$, bolj položen bo graf gostote Rayleighove porazdelitve za ta parameter. 
-	Zaradi razmeroma majhne velikosti standardnih napak lahko sklepamo, da je cenilka $\widehat{\theta}$ pridobljena po metodi največjega verjetna razmeroma dobra cenilka za parameter $\theta$. Seveda jo lahko še izboljšamo, tako da jo popravimo v nepristransko cenilko $\widehat{\theta}^{+}$, ki smo jo izračunali v podpodpoglavju \ref{subsubsect: 2C1}.
+	Na vsakem grafu verjetja vidimo, da je $SE$-okolica pripadajoče izračunane cenilke izjemno majhna in vsebuje maksimum verjetja, kar nas ne preseneti, saj je to smiselno za cenilko pridobljeno po metodi največjega verjetja. Dodatno opazimo, da verjetja postajajo bolj položna z zaporednimi poskusi. Razlog za to je naraščanje velikosti posameznih meritev v zaporednih poskusih kar poveča numerično vrednost cenilke. Obnašanje grafov gostot je torej popolnoma normalno, saj velja, da večji kot je parameter $\theta$, bolj položen bo graf gostote Rayleighove porazdelitve za ta parameter. 
+	Zaradi razmeroma majhne velikosti standardnih napak lahko sklepamo, da je cenilka $\widehat{\theta}$ pridobljena po metodi največjega verjetna dobra cenilka za parameter $\theta$. Seveda jo lahko še izboljšamo, tako da jo popravimo v nepristransko cenilko $\widehat{\theta}^{+}$, ki smo jo izračunali v podpodpoglavju \ref{subsubsect: 2C1}.
 	
 	\subsection{Številska ocena druge cenilke} \label{subsect: 2E}
 	
-	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $SE(\widehat{\theta}_n) = \sqrt{Var(\widehat{\theta}_n)} = \sqrt{\frac{(4-\pi)}{n\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n\pi}}\theta$. Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n\pi}}\widehat{\theta}_n$. Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli skupaj z na dve decimalki zaokroženimi vrednostmi standardnih napak.
+	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $SE(\widehat{\theta}_n) = \sqrt{\frac{Var(\widehat{\theta}_n)}{n}} = \sqrt{\frac{(4-\pi)}{n^2\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n^2\pi}}\theta$. Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n^2\pi}}\widehat{\theta}_n$. Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli skupaj z na dve decimalki zaokroženimi vrednostmi standardnih napak.
 	
 	\begin{table}[h!]
 		\label{tab: mmse}
@@ -372,7 +372,7 @@
 			\hline
 			Eksperiment & kratki & srednji & dolgi \\ \hline
 			Vrednost $\theta$ & $1{,}163652$ & $2{,}068998$ & $3{,}412388$ \\ \hline
-			Ocena SE & $0{,}06240695$ & $0{,}06867617$ & $0{,}1558456$ \\ \hline
+			Ocena SE & $0{,}006402818$ & $0{,}004360941$ & $0{,}01361629$ \\ \hline
 		\end{tabular}
 		\caption{Numerične vrednosti cenilke pridobljene po metodi momentov in standardne napake po eksperimentih}
 	\end{table}
@@ -382,14 +382,14 @@
 	\begin{figure}[h!]
 		\label{fig: 2Eplot1}
 		\centering
-		\includegraphics[scale = 0.35]{VerjetjeMM1}
+		\includegraphics[scale = 0.4]{VerjetjeMM1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v prvem poskusu}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot2}
 		\centering
-		\includegraphics[scale = 0.35]{VerjetjeMM2}
+		\includegraphics[scale = 0.325]{VerjetjeMM2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v drugem poskusu}
 	\end{figure}
 	
@@ -400,7 +400,7 @@
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v tretjem poskusu}
 	\end{figure}
 	
-	Tudi tukaj pridemo do podobnih sklepov, kot v podpoglavju \ref{subsect: 2D} - $SE$-okolica cenilke vsebuje maksimum gostote in je razmeroma majhna zahvaljujoč majhni standardni napaki cenilke. Standardne napake za to cenilko so v resnici presenetljivo blizu vrednostim standardnih napak pri cenilki pridobljeni z metodo največjega verjetja. V primeru, ko napake zaokrožimo na dve decimalki natančno se razlika pojavi samo v zadnjem poskusu, kjer znaša $0{,}01$. To nam pove, da je tudi cenilka, ki smo jo pridobili po metodi momentov, razmeroma dobra alternativa, še posebej zato, ker jo je veliko lažje izračunati.
+	Tudi tukaj pridemo do podobnih sklepov, kot v podpoglavju \ref{subsect: 2D} - $SE$-okolica cenilke vsebuje maksimum gostote in je razmeroma zelo majhna zahvaljujoč majhni standardni napaki cenilke. Standardne napake za to cenilko so v resnici presenetljivo blizu vrednostim standardnih napak pri cenilki pridobljeni z metodo največjega verjetja. V primeru, ko napake zaokrožimo na tri decimalke natančno se razlika pojavi samo v zadnjem poskusu, kjer znaša $0{,}001$. To nam pove, da je tudi cenilka, ki smo jo pridobili po metodi momentov, razmeroma dobra alternativa, še posebej zato, ker jo je veliko lažje izračunati.
 	
 	Dodatno je spodaj ponovno priložen graf na katerem so narisane vse tri gostote, za vizualno primerjavo.
 	\begin{figure}[h!]
@@ -416,20 +416,20 @@
 	\begin{figure}[h!]
 		\label{fig: 2FHist1}
 		\centering
-		\includegraphics[scale=0.425]{Hist1}
+		\includegraphics[scale=0.4]{Hist1}
 		\caption{Histogram meritev v prvem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}
 	\begin{figure}[h!]
 		\label{fig: 2FHist2}
 		\centering
-		\includegraphics[scale=0.425]{Hist2}
+		\includegraphics[scale=0.4]{Hist2}
 		\caption{Histogram meritev v drugem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}	
 	
 	\begin{figure}[h!]
 		\label{fig: 2FHist3}
 		\centering
-		\includegraphics[scale=0.425]{Hist3}
+		\includegraphics[scale=0.4]{Hist3}
 		\caption{Histogram meritev v tretjem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}
 	
