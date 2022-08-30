@@ -14,7 +14,7 @@ n1 <- nrow(kratki)
 x1 <- kratki[, 1]
 t1 <- sqrt(sum(x1^2)/(2*n1))
 
-SE1 <- t1*sqrt(1 - (gamma(n1 + 0.5)/(sqrt(n1)*gamma(n1)))^2) / sqrt(n1)
+SE1 <- t1*sqrt(1 - (gamma(n1 + 0.5)/(sqrt(n1)*gamma(n1)))^2)
 
 #Drugi eksperiment
 n2 <- nrow(srednji)
@@ -25,14 +25,14 @@ t2 <- sqrt(sum(x2^2)/(2*n2))
 #Pri izračunu gamma(n2) nam R vrne Inf (neskončno). Posledično, nam za SE2 vrne
 #vrednost NaN. Zaradi tega bomo tukaj vstavili drugod izračunano vrednost.
 #Spletna stran wolframalpha nam vrne numerični rezultat
-SE2 <- 0.06589590 /sqrt(n2)
+SE2 <- 0.06589590
 
 #Tretji eksperiment
 n3 <- nrow(dolgi)
 x3 <- dolgi[, 1]
 t3 <- sqrt(sum(x3^2)/(2*n3))
 
-SE3 <- t3*sqrt(1 - (gamma(n3 + 0.5)/(sqrt(n3)*gamma(n3)))^2)/sqrt(n3)
+SE3 <- t3*sqrt(1 - (gamma(n3 + 0.5)/(sqrt(n3)*gamma(n3)))^2)
 
 
 #Zapišimo ocenjene gostote porazdelitve
@@ -73,7 +73,7 @@ xd <- sort(c(seq(0, 12, 0.001), t3-SE3, t3, t3+SE3))
 
 xa <- sort(c(xd, t1-SE1, t1, t1+SE1, t2-SE2, t2, t2+SE2))
 
-#par(mfrow=c(2, 2))
+par(mfrow=c(2, 2))
 
 plot(xk, gost1(xk), type="l", main="Gostota razdalj v 1. poskusu", xaxt= "n", yaxt = "n", xlab = "", ylab="")
 axis(1, at = sort(c(seq(0, 6, 1), round(t1, 5))), las=2)
