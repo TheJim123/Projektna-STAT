@@ -287,8 +287,10 @@
 	Sledi, da je $E[\widehat{\theta}_n] = \frac{\theta\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)}$ in potem je $\widehat{\theta}_n$ pristranska cenilka, saj je $$E[\widehat{\theta}_n] - \theta = \theta (\frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} - 1) \neq 0$$ za $\theta\neq 0$. Cenilko lahko popravimo na nepristransko. Nepristranska cenilka je tako $$\theta_n^+ = \frac{\Gamma(n)\sqrt{n}}{\Gamma(n + \frac{1}{2})}\widehat{\theta}_n = \frac{\Gamma(n)}{\Gamma(n + \frac{1}{2})\sqrt{2}}\sqrt{Y}$$
 	Uspelo nam je torej izračunati pristranskost naše cenilke $\widehat{\theta}_n$: $$Bias(\widehat{\theta}_n) = \theta(\frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} - 1)$$
 	
-	Ko poračunamo limito $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$, vidimo, da je $\widehat{\theta}_n$ asimptotsko nepristranska, saj sledi $\lim_{n\mapsto\infty}Bias(\widehat{\theta}_n) = 0$. Poračunati moramo še varianco cenilke $Var(\widehat{\theta}_n) = E[\widehat{\theta}_n^2] - E[\widehat{\theta}_n]^2 = E[\frac{1}{2n} Y] - E[\widehat{\theta}_n]^2$. Za Porazdelitev $Y$ vemo, da je $\Gamma(n, \frac{1}{2\theta^2})$, tako da hitro pridobimo $E[\frac{1}{2n} Y] = \frac{1}{2n}\frac{n}{\frac{1}{2\theta^2}} = \frac{1}{2n}2n\theta^2 = \theta^2$. Sledi $$Var(\widehat{\theta}_n) = \theta^2(1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2})$$
-	Ko to varianco limitiramo z $n\mapsto\infty$, gre izraz v oklepaju proti $0$, torej je $\lim_{n\mapsto\infty}Var(\widehat{\theta}_n) = 0$. Posledično je asimptotična $MSE(\widehat{\theta}_n)$ enaka $0$, torej $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n) = 0$.
+	Ko poračunamo limito $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$, vidimo, da je $\widehat{\theta}_n$ asimptotsko nepristranska, saj sledi $\lim_{n\mapsto\infty}Bias(\widehat{\theta}_n) = 0$. Prej omenjeno limito lahko izračunamo tako, da obravnavamo naravni logaritem $\Gamma$ funkcije. Velja namreč, da je $\ln(\Gamma(n+1)) = \ln(n) + \ln(\Gamma(n))$. Za velike $n$ postaja $\ln(\Gamma)$ vse bolj strma in ">linearna"<, torej lahko za velike $n$ naredimo aproksimacijo $\ln(\Gamma(n + \frac{1}{2})) \approx \frac{1}{2}\ln(n) + \ln(\Gamma(n))$. Ko to aproksimacijo antilogaritmiramo, dobimo $\Gamma(n + \frac{1}{2}) \approx \sqrt{n}\Gamma(n)$ oz. $\frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)}\approx 1$. Ko pošljemo $n\mapsto\infty$, postane rezultat točen, torej $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$.
+	
+	Poračunati moramo še varianco cenilke $Var(\widehat{\theta}_n) = E[\widehat{\theta}_n^2] - E[\widehat{\theta}_n]^2 = E[\frac{1}{2n} Y] - E[\widehat{\theta}_n]^2$. Za Porazdelitev $Y$ vemo, da je $\Gamma(n, \frac{1}{2\theta^2})$, tako da hitro pridobimo $E[\frac{1}{2n} Y] = \frac{1}{2n}\frac{n}{\frac{1}{2\theta^2}} = \frac{1}{2n}2n\theta^2 = \theta^2$. Sledi $$Var(\widehat{\theta}_n) = \theta^2(1 - \frac{\Gamma(n + \frac{1}{2})^2}{n\Gamma(n)^2})$$
+	Ko to varianco limitiramo z $n\mapsto\infty$, gre izraz v oklepaju proti $0$, kar lahko vidimo s pomočjo prej opravljenega izračuna limite $\lim_{n\mapsto\infty} \frac{\Gamma(n + \frac{1}{2})}{\sqrt{n}\Gamma(n)} = 1$. Velja torej, da je $\lim_{n\mapsto\infty}Var(\widehat{\theta}_n) = 0$. Posledično je asimptotična $MSE(\widehat{\theta}_n)$ enaka $0$, torej $\lim_{n\mapsto\infty}MSE(\widehat{\theta}_n) = 0$.
 	
 	\subsubsection{MSE cenilke po metodi momentov}\label{subsubsect: 2C2}
 	Sedaj storimo enako še za cenilko, ki smo jo pridobili po metodi momentov $\widehat{\theta}_n = \sqrt{\frac{2}{\pi}}\bar{X}$. Najprej poračunajmo njeno pričakovano vrednost.
@@ -326,44 +328,37 @@
 	
 	Izračun standardne napake cenilke je neizogiben in pomemben del vsake statistične analize podatkov. Razlog za to je, ker nam služi kot merilo, kako dobro se naša cenilka prilega dejanskemu parametru, ki ga cenimo glede na dane podatke. Če je standardna napaka velika, vrednosti cenilke močno odstopajo od pričakovane vrednosti cenilke, ki je, v primeru ko je cenilka nepristranska, ravno enaka populacijskemu parametru, ki ga ocenjuje. Iz tega razloga, se načeloma raje dela z nepristranskimi cenilkami. Vseeno enaka intuicija velja tudi za pristranske spremenljivke - večja kot je standardna napaka na vzorcu, bolj odstopa cenilka od dejanske vrednosti parametra, ki ga ocenjujemo, za celotno populacijo in manjša kot je standardna napaka, manj cenilka odstopa od dejanske vrednosti parametra.
 	
-	Kot je bilo že prej omenjeno, skripta \textit{SlucajniSprehodiMNV.R} tudi nariše grafe verjetij, ki pripadajo izračunanim ocenam paramatra $\theta$. Na teh grafih je z zeleno črto označena izračunana vrednost $\theta$, okoli nje pa je z rdečima črtkanima premicama označena pripadajoča $SE$-okolica. Skripta sicer grafe izriše enega zraven drugega, tukaj pa bodo priloženi vsak posebej.
+	Kot je bilo že prej omenjeno, skripta \textit{SlucajniSprehodiMNV.R} tudi nariše grafe verjetij, ki pripadajo izračunanim ocenam paramatra $\theta$. Na teh grafih je z zeleno črto označena izračunana vrednost $\theta$, okoli nje pa je z rdečima črtkanima premicama označena pripadajoča $SE$-okolica. Skripta sicer grafe izriše enega nad drugim, tukaj pa bodo priloženi vsak posebej.
 	
 	\begin{figure}[h!]
 		\label{fig: 2Dplot1}
 		\centering
-		\includegraphics[scale = 0.375]{VerjetjeMNV1}
+		\includegraphics[scale = 0.3]{VerjetjeMNV1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v prvem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot2}
 		\centering
-		\includegraphics[scale = 0.375]{VerjetjeMNV2}
+		\includegraphics[scale = 0.3]{VerjetjeMNV2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v drugem poskusu}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2Dplot3}
 		\centering
-		\includegraphics[scale = 0.375]{VerjetjeMNV3}
+		\includegraphics[scale = 0.325]{VerjetjeMNV3}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi največjega verjetja, v tretjem poskusu}
 	\end{figure}
-
-	Skripta dodatno vrne graf, na katerem so narisane vse tri zgoraj prikazane gostote, skupaj z oznakami njihovih pripadajočih vrednosti cenilk $\widehat{\theta}$ in pripadajočimi $SE$-okolicami. Namen tega zadnjega grafa je prikazati, kako izgledajo gostote, ko jih postavimo v isti koordinatni sistem in na podlagi tega omogočiti primerjavo.
 	
-	\begin{figure}[h!]
-		\label{fig: 2Dplot4}
-		\centering
-		\includegraphics[scale = 0.35]{VerjetjeMNV4}
-		\caption{Verjetja za vse ocene cenilke $\theta$, pridobljene po metodi največjega verjetja}
-	\end{figure}
+	Na vsakem grafu verjetja vidimo, da je širina $SE$-okolice pripadajoče izračunane cenilke v razmerju s širino ">vala"<, na grafu, kjer je verjetje pozitivno. V resnici opazimo, da se te $SE$-okolice širijo skupaj z valovi, ti pa se širijo z večanjem meritev skozi poskuse. 
 	
-	Na vsakem grafu verjetja vidimo, da je $SE$-okolica pripadajoče izračunane cenilke razmeroma majhna in vsebuje maksimum verjetja, kar nas ne preseneti, saj je to smiselno za cenilko pridobljeno po metodi največjega verjetja. Dodatno opazimo, da verjetja postajajo bolj položna z zaporednimi poskusi. Razlog za to je naraščanje velikosti posameznih meritev v zaporednih poskusih kar poveča numerično vrednost cenilke. Obnašanje grafov gostot je torej popolnoma normalno, saj velja, da večji kot je parameter $\theta$, bolj položen bo graf gostote Rayleighove porazdelitve za ta parameter. 
 	Zaradi razmeroma majhne velikosti standardnih napak lahko sklepamo, da je cenilka $\widehat{\theta}$ pridobljena po metodi največjega verjetna dobra cenilka za parameter $\theta$. Seveda jo lahko še izboljšamo, tako da jo popravimo v nepristransko cenilko $\widehat{\theta}^{+}$, ki smo jo izračunali v podpodpoglavju \ref{subsubsect: 2C1}.
 	
 	\subsection{Številska ocena druge cenilke} \label{subsect: 2E}
 	
-	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $SE(\widehat{\theta}_n) = \sqrt{Var(\widehat{\theta}_n)} = \sqrt{\frac{(4-\pi)}{n\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n\pi}}\theta$. Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n\pi}}\widehat{\theta}_n$. Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli skupaj z na dve decimalki zaokroženimi vrednostmi standardnih napak.
+	Tako kot v poglavju \ref{subsect: 2D}, lahko tudi za cenilko pridobljeno po metodi momentov stnandardno napako poračunamo kar kot koren variance: $$SE(\widehat{\theta}_n) = \sqrt{Var(\widehat{\theta}_n)} = \sqrt{\frac{(4-\pi)}{n\pi}\theta^2} = \sqrt{\frac{(4-\pi)}{n\pi}}\theta$$ Ker $\theta$ seveda ne poznamo, v izraz vstavimo cenilko $\widehat{\theta}_n$. Tako je naša formula na koncu $SE(\widehat{\theta}_n) = \sqrt{\frac{(4-\pi)}{n\pi}}\widehat{\theta}_n$. 
+	Skripta \textit{SlucajniSprehodiMM.R} poračuna oceno cenilke, ki smo jo pridobili po metodi momentov ter standardno napako s pomočjo prej navedene formule. Vrednosti so navedene v spodnji tabeli skupaj z na dve decimalki zaokroženimi vrednostmi standardnih napak.
 	
 	\begin{table}[h!]
 		\label{tab: mmse}
@@ -382,33 +377,25 @@
 	\begin{figure}[h!]
 		\label{fig: 2Eplot1}
 		\centering
-		\includegraphics[scale = 0.45]{VerjetjeMM1}
+		\includegraphics[scale = 0.31]{VerjetjeMM1}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v prvem poskusu}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot2}
 		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMM2}
+		\includegraphics[scale = 0.31]{VerjetjeMM2}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v drugem poskusu}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\label{fig: 2Eplot3}
 		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMM3}
+		\includegraphics[scale = 0.31]{VerjetjeMM3}
 		\caption{Verjetje za oceno cenilke $\theta$, pridobljene po metodi momentov, v tretjem poskusu}
 	\end{figure}
 	
-	Tudi tukaj pridemo do podobnih sklepov, kot v podpoglavju \ref{subsect: 2D} - $SE$-okolica cenilke vsebuje maksimum gostote in je razmeroma majhna zahvaljujoč majhni standardni napaki cenilke. Standardne napake za to cenilko so v resnici presenetljivo blizu vrednostim standardnih napak pri cenilki pridobljeni z metodo največjega verjetja. V primeru, ko napake zaokrožimo na dve decimalki natančno se razlika pojavi samo v zadnjem poskusu, kjer znaša $0{,}01$. To nam pove, da je tudi cenilka, ki smo jo pridobili po metodi momentov, razmeroma dobra alternativa, še posebej zato, ker jo je veliko lažje izračunati.
-	
-	Dodatno je spodaj ponovno priložen graf na katerem so narisane vse tri gostote, za vizualno primerjavo.
-	\begin{figure}[h!]
-		\label{fig: 2Eplot4}
-		\centering
-		\includegraphics[scale = 0.4]{VerjetjeMM4}
-		\caption{Verjetja za vse ocene cenilke $\theta$, pridobljene po metodi momentov}
-	\end{figure}
+	V tem primeru pa opazimo, da je situacija drugačna kot v podpoglavju \ref{subsect: 2D}, saj $SE$-okolice cenilke več ne vsebujejo vrha verjetij na enak, simetričen način, temveč so zamaknjene. To se zgodi kljub temu, da so standardne napake za to cenilko pridobljeno po metodi momentov razmeroma blizu vrednostim standardnih napak pri cenilki pridobljeni z metodo največjega verjetja. V primeru, ko napake zaokrožimo na dve decimalki natančno se razlika pojavi samo v zadnjem poskusu, kjer znaša $0{,}01$. Še vedno torej velja, da je širina intervala proporcionalna s širino ">vala"< verjetja, toda simetrija je izgubljena. To nam pove, da je cenilka, ki smo jo pridobili po metodi momentov, sicer lažje izračunljiva od cenilke po metodi največjega verjetja, a verjetno ni enako dobra.
 	
 	\subsection{Histogram meritev in grafi gostot cenilk} \label{subsect: 2F}
 	Da se dokončno prepričamo, da sta izračunani cenilki dobri, bomo za vsak poskus narisali histogram meritev in nanj dorisali gostoti za obe cenilki. Pri določanju širine razredov za histograme bomo uporabili modificirano Freedman-Diaconisovo pravilo, po katerem naj bi širina vsakega razreda bila približno $\frac{2{,}6IQR}{\sqrt[3]{n}}$, kjer je $n$ število podatkov, $IQR$ pa njihov interkvartilni razmik. Skripta \textit{SlucajniSprehodiHIST.R} poračuna te širine za vsak eksperiment ter nato izriše pripadajoče histograme skupaj z gostotama obeh cenilki na vrhu. Skripta te grafe tudi izriše, so pa tudi prikazani spodaj.
@@ -416,25 +403,27 @@
 	\begin{figure}[h!]
 		\label{fig: 2FHist1}
 		\centering
-		\includegraphics[scale=0.3]{Hist1}
+		\includegraphics[scale=0.56]{Hist1}
 		\caption{Histogram meritev v prvem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}
 
 	\begin{figure}[h!]
 		\label{fig: 2FHist2}
 		\centering
-		\includegraphics[scale=0.3]{Hist2}
+		\includegraphics[scale=0.5]{Hist2}
 		\caption{Histogram meritev v drugem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}	
 	
 	\begin{figure}[h!]
 		\label{fig: 2FHist3}
 		\centering
-		\includegraphics[scale=0.3]{Hist3}
+		\includegraphics[scale=0.5]{Hist3}
 		\caption{Histogram meritev v tretjem poskusu skupaj z gostotama za pripadajoči cenilki.}
 	\end{figure}
 	
-	Vidimo lahko, da se na vsakem grafu obe gostoti medseboj, sicer z manjšimi odstopanji, razmeroma dobro prilegata. V primeru drugega poskusa, se v resnici skoraj popolnoma prekrivata. Tudi s histogrami je podobno - obe gostoti se prilegata obliki, ki jo tvorijo stolpci historgrama. Lahko torej sklepamo, da bi z večanjem vzorcev proti neskončnosti histogram ">konvergiral"< proti grafu gostote. Dokončno torej zatrdimo, da sta obe cenilki res dobri.
+	Vidimo lahko, da se na vsakem grafu obe gostoti medseboj, sicer z manjšimi odstopanji, razmeroma dobro prilegata. V primeru drugega poskusa, se v resnici skoraj popolnoma prekrivata. Tudi s histogrami je podobno - obe gostoti se prilegata obliki, ki jo tvorijo stolpci historgrama. Lahko torej sklepamo, da bi z večanjem vzorcev proti neskončnosti histogram ">konvergiral"< proti grafu gostote. Dokončno torej zatrdimo, da sta obe cenilki res dobri in predpostavka o porazdelitvi podatkov drži. 
+	
+	Ko primerjamo grafe verjetij s histogrami in odstopanji gostot lahko tudi sklepamo, da morda obstaja povezava med zamikom $SE$-okolic in razliko v prileganju gostot histogramu. V prvem in tretjem poskusu je razlika bolj opazna, kar velja tudi za zamika $SE$-okolic pri grafih verjetij, v drugem poskusu, kjer je zamik $SE$-okolice veliko manjši, pa se gostoti skorajda pokrivata.
 	
 	\section{Temperature}\label{sect: Temperature}
 	V datoteki \textit{Temp\_LJ.csv} imamo podane povprečne mesečne temperature od leta $1986$ do $2020$. Glede na dane podatke bi želeli uporabiti model, ki bo čim bolje napovedal temperature v prihodnosti. 
@@ -545,49 +534,51 @@
 	\]
 	
 	\subsubsection{Residuali in RSS obeh modelov}\label{subsubsect: 3AResiduali}
-	Zdaj, ko imamo cenilki za $\beta$ in $\bar{\beta}$ po metodi najmanjših kvadratov lahko poračunamo residuale. V teoretičnem modelu $Y = Z\gamma + \varepsilon$, kot je bil opisan prej v podpodpoglavju \ref{subsubsect: 3ACenilki}, residuale $\widehat{\varepsilon}_i$ poračunamo s formulo $\widehat{\varepsilon}_i = Y_i - \sum_{j = 1}^{p}z_{ij}\widehat{\gamma}_j$, kjer je $\widehat{\gamma}$ cenilka za $\gamma$ po metodi najmanjših kvadratov. Kadar računamo s pomočjo računalnika, je bolj priročen matrični zapis $\widehat{\varepsilon} = Y - Z\widehat{\gamma}$. Količina $RSS$ tega modela je ravno enaka $2$-normi vektorja rezidualov $\widehat{\varepsilon}$ oziroma vsoti $\sum_{i = 1}^{n}\widehat{\varepsilon}_i^2$. Skripta \textit{Temperature.R} izračuna tako reziduale kot $RSS$ za oba modela, a (v konzolo) izpiše samo $RSS$. Vrednosti $RSS$ so tudi navedene v spodnji tabeli
+	Zdaj, ko imamo cenilki za $\beta$ in $\bar{\beta}$ po metodi najmanjših kvadratov lahko poračunamo residuale. V teoretičnem modelu $Y = Z\gamma + \varepsilon$, kot je bil opisan prej v podpodpoglavju \ref{subsubsect: 3ACenilki}, residuale $\widehat{\varepsilon}_i$ poračunamo s formulo $$\widehat{\varepsilon}_i = Y_i - \sum_{j = 1}^{p}z_{ij}\widehat{\gamma}_j = Y_i - (Z\widehat{\gamma})_i = (Y - Z\widehat{\gamma})_i$$ Pri tem je $\widehat{\gamma}$ cenilka za $\gamma$ po metodi najmanjših kvadratov. Kadar računamo s pomočjo računalnika, je bolj priročen vektorski zapis $\widehat{\varepsilon} = Y - Z\widehat{\gamma}$. Količina $RSS$ tega modela je ravno enaka kvadratu $2$-norme vektorja rezidualov $\widehat{\varepsilon}$ oziroma vsoti $\sum_{i = 1}^{n}\widehat{\varepsilon}_i^2$. Skripta \textit{Temperature.R} izračuna tako reziduale kot $RSS$ za oba modela, a (v konzolo) izpiše samo $RSS$. Vrednosti $RSS$ so tudi navedene v spodnji tabeli
 	
 	\begin{table}[h!]
 		\centering
 		\begin{tabular}{| c | c |}
 			\hline
 			Model & RSS \\ \hline
-			$A$ & $35{,}5045981004312$ \\ \hline
-			$B$ & $33{,}9190280253558$ \\ \hline
+			$A$ & $1260{,}57648627314$ \\ \hline
+			$B$ & $1150{,}50046218487$ \\ \hline
 		\end{tabular}
 		\caption{Tabela vrednosti $RSS$ za modela $A$ in $B$}
 	\end{table}
 	
 	\subsubsection{Preizkus modela $A$ v $B$ s stopnjama tveganja $0{,}01$ in $0{,}05$}\label{subsubsect: 3APreizkus}
-		Končno imamo vse, kar potrebujemo, da preizkusimo model $A$ znotraj $B$. Skripta \textit{Temperature.R} poleg vseh ostalih prej omenjenih vrednosti v konzolo izpiše tudi izračunan $F$. Ta znaša $F = 2{,}1139462554871$. Poleg tega smo poračunali tudi $F_{Fisher(9, 407)}^{-1}(1-\alpha)$ za $\alpha = 0{,}01$ ter $\alpha = 0{,}05$. Vrednosti sta predstavljeni v spodnji tabeli.
+		Končno imamo vse, kar potrebujemo, da preizkusimo model $A$ znotraj $B$. Skripta \textit{Temperature.R} poleg vseh ostalih prej omenjenih vrednosti v konzolo izpiše tudi $F$, izračunan po formuli $$F = \frac{\frac{(RSS_A - RSS_B)}{(p-q)}}{\frac{RSS_B}{(n - p)}}$$ Pri tem je $p$ število parametrov modela $B$, $q$ število parametrov modela $A$ ter $n$ število podatkov. Račun pove, da je $F = 4{,}32671049362724$. Poleg tega smo poračunali tudi $F_{Fisher(9, 407)}^{-1}(1-\alpha)$ za $\alpha = 0{,}01$ ter $\alpha = 0{,}05$. Vrednosti sta predstavljeni v spodnji tabeli.
 		
 		\begin{table}[h!]
 			\centering
 			\begin{tabular}{| c | c | c |}
 				\hline
 				$\alpha$ & $F_{Fisher(9, 407)}^{-1}(1-\alpha)$ & $F_{Fisher(9, 407)}^{-1}(1-\alpha) <= F$\\ \hline
-				$0{,}01$ & $2{,}45105980939293$ & Ne \\ \hline
+				$0{,}01$ & $2{,}45105980939293$ & Da \\ \hline
 				$0{,}05$ & $1{,}9028951359083$ & Da \\ \hline
 			\end{tabular}
 			\caption{Tabela vrednosti $F_{Fisher(9, 407)}^{-1}(1-\alpha)$ za modela $\alpha = 0{,}01$ in $\alpha = 0{,}05$}
 		\end{table}
-		V tretjem stolpcu so tudi rezultati primerjav $F \geq F_{Fisher(9, 407)}^{-1}(1-\alpha)$. Če neenakost velja, model $A$ znotraj $B$ zavrnemo. To se zgodi ravno pri vrednosti $\alpha = 0{,}05$, ne pa tudi pri $\alpha = 0{,}01$. 
+		V tretjem stolpcu so tudi rezultati primerjav $F \geq F_{Fisher(9, 407)}^{-1}(1-\alpha)$. Če neenakost velja, model $A$ znotraj $B$ zavrnemo. To se zgodi ravno pri obeh vrednostih $\alpha$. 
 		
 	\subsection{Akaikejeva informacija modelov}\label{subsect: 3B}
-	Preostane nam samo še izračun Akaikejeve informacije. To bomo storili po formuli $AIC = 2m + n\ln(RSS)$, kjer je $m$ število parametrov, $n$ število podatkov oziroma opažanj ter $RSS$ količina, ki smo jo že poračunali za oba modela. Tudi te vrednosti izračunamo v skripti \textit{Temperature.R} in so avtomatsko izpisane v konzolo. Poleg tega so vrednosti predstavljene tudi v spodnji tabeli.
+	Preostane nam samo še izračun Akaikejeve informacije. To bomo storili z naslednjo formulo: $$AIC = 2m + n\ln(RSS)$$ Pri tem je $m$ število parametrov, $n$ število podatkov oziroma opažanj ter $RSS$ količina, ki smo jo že poračunali za oba modela. Tudi te vrednosti izračunamo v skripti \textit{Temperature.R} in so avtomatsko izpisane v konzolo. Poleg tega so vrednosti predstavljene tudi v spodnji tabeli.
 
 	\begin{table}[h!]
 		\centering
 		\begin{tabular}{| c | c |}
 			\hline
 			Model & $AIC$ \\ \hline
-			$A$ & $1507{,}25812906086$ \\ \hline
-			$B$ & $1506{,}06998535212$ \\ \hline
+			$A$ & $3006{,}51625812173$ \\ \hline
+			$B$ & $2986{,}13997070424$ \\ \hline
 		\end{tabular}
 		\caption{Tabela vrednosti $AIC$ modelov $A$ in $B$}
 	\end{table}
 	
-	Opazimo, da sta si $AIC$ modelov $A$ in $B$ blizu, kar lahko vidimo tudi na grafu, ki primerja modela s priloženimi podatki. 
+	Opazimo, da sta si $AIC$ modelov $A$ in $B$ relativno blizu. Če oba podatka zaokrožimo na dve decimalni mesti, je razlika $20{,}38$, kar v primerjavi z velikostjo obeh vrednosti ni veliko. 
+	
+	To, da sta oba modela skoraj enako dobra, lahko vidimo tudi na grafih, ki primerjata modela s priloženimi podatki. Da bo prikaz bolj pregleden, sta grafa narisana samo za prvih $20$ let.
 	
 	\begin{figure}[h!]
 		\label{fig: 3BCompare}

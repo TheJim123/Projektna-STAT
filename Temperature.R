@@ -56,11 +56,11 @@ Betab<- Bb$coefficients
 
 resa <- Temp - Xa%*%Betaa
 
-RSSa <- norm(resa, type="2")
+RSSa <- norm(resa, type="2")^2
 
 resb <- Temp - Xb%*%Betab
 
-RSSb <- norm(resb, type="2")
+RSSb <- norm(resb, type="2")^2
 
 #Poračunamo kvocient F
 

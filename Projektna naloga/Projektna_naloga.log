@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  30 AUG 2022 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.24)  31 AUG 2022 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,153 +950,181 @@ Overfull \hbox (21.47913pt too wide) detected at line 286
 []e[] du \OT1/lmr/m/n/10 = [][]
  []
 
+
+Overfull \hbox (1.69002pt too wide) in paragraph at lines 292--292
+[]\T1/lmr/m/n/10 Pora£unati mo-ramo ²e va-ri-anco ce-nilke $\OML/lmm/m/it/10 Va
+r\OT1/lmr/m/n/10 ([]) = \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [[]] \OMS/lmsy/m/n/10
+ ^^@ \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [[]][] = \OML/lmm/m/it/10 E\OT1/lmr/m/n/
+10 [[]\OML/lmm/m/it/10 Y\OT1/lmr/m/n/10 ] \OMS/lmsy/m/n/10 ^^@
+ []
+
 [13] [14]
-<VerjetjeMNV1.jpg, id=75, 499.8675pt x 501.37312pt>
+<VerjetjeMNV1.jpg, id=75, 502.12593pt x 501.37312pt>
 File: VerjetjeMNV1.jpg Graphic file (type jpg)
 <use VerjetjeMNV1.jpg>
-Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 334.
-(pdftex.def)             Requested size: 187.44984pt x 188.01445pt.
-<VerjetjeMNV2.jpg, id=76, 502.12593pt x 502.12593pt>
+Package pdftex.def Info: VerjetjeMNV1.jpg  used on input line 336.
+(pdftex.def)             Requested size: 150.63893pt x 150.41309pt.
+<VerjetjeMNV2.jpg, id=76, 499.8675pt x 499.8675pt>
 File: VerjetjeMNV2.jpg Graphic file (type jpg)
 <use VerjetjeMNV2.jpg>
-Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 341.
-(pdftex.def)             Requested size: 188.29675pt x 188.29675pt.
-<VerjetjeMNV3.jpg, id=77, 499.8675pt x 499.8675pt>
+Package pdftex.def Info: VerjetjeMNV2.jpg  used on input line 343.
+(pdftex.def)             Requested size: 149.9614pt x 149.9614pt.
+<VerjetjeMNV3.jpg, id=77, 500.62032pt x 500.62032pt>
 File: VerjetjeMNV3.jpg Graphic file (type jpg)
 <use VerjetjeMNV3.jpg>
-Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 348.
-(pdftex.def)             Requested size: 187.44984pt x 187.44984pt.
- [15 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
-<VerjetjeMNV4.jpg, id=81, 499.8675pt x 501.37312pt>
-File: VerjetjeMNV4.jpg Graphic file (type jpg)
-<use VerjetjeMNV4.jpg>
-Package pdftex.def Info: VerjetjeMNV4.jpg  used on input line 357.
-(pdftex.def)             Requested size: 174.95624pt x 175.48322pt.
- [16 <./VerjetjeMNV3.jpg> <./VerjetjeMNV4.jpg>]
-<VerjetjeMM1.jpg, id=85, 501.37312pt x 499.8675pt>
+Package pdftex.def Info: VerjetjeMNV3.jpg  used on input line 350.
+(pdftex.def)             Requested size: 162.69968pt x 162.69968pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./VerjetjeMNV1.jpg> <./VerjetjeMNV2.jpg>]
+<VerjetjeMM1.jpg, id=81, 572.89032pt x 500.62032pt>
 File: VerjetjeMM1.jpg Graphic file (type jpg)
 <use VerjetjeMM1.jpg>
-Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 385.
-(pdftex.def)             Requested size: 225.61581pt x 224.9383pt.
-<VerjetjeMM2.jpg, id=86, 500.62032pt x 499.8675pt>
+Package pdftex.def Info: VerjetjeMM1.jpg  used on input line 380.
+(pdftex.def)             Requested size: 177.59416pt x 155.19069pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<VerjetjeMM2.jpg, id=82, 571.38469pt x 499.8675pt>
 File: VerjetjeMM2.jpg Graphic file (type jpg)
 <use VerjetjeMM2.jpg>
-Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 392.
-(pdftex.def)             Requested size: 200.24457pt x 199.94345pt.
-
+Package pdftex.def Info: VerjetjeMM2.jpg  used on input line 387.
+(pdftex.def)             Requested size: 177.12741pt x 154.95732pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<VerjetjeMM3.jpg, id=87, 503.63156pt x 499.11469pt>
+<VerjetjeMM3.jpg, id=83, 573.64313pt x 498.36188pt>
 File: VerjetjeMM3.jpg Graphic file (type jpg)
 <use VerjetjeMM3.jpg>
-Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 399.
-(pdftex.def)             Requested size: 201.44905pt x 199.64232pt.
+Package pdftex.def Info: VerjetjeMM3.jpg  used on input line 394.
+(pdftex.def)             Requested size: 177.82753pt x 154.49059pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./VerjetjeMM1.jpg>]
-<VerjetjeMM4.jpg, id=91, 502.87875pt x 500.62032pt>
-File: VerjetjeMM4.jpg Graphic file (type jpg)
-<use VerjetjeMM4.jpg>
-Package pdftex.def Info: VerjetjeMM4.jpg  used on input line 409.
-(pdftex.def)             Requested size: 201.14793pt x 200.24457pt.
- [18 <./VerjetjeMM2.jpg> <./VerjetjeMM3.jpg>]
-<Hist1.jpg, id=95, 505.13719pt x 501.37312pt>
+[16 <./VerjetjeMNV3.jpg>]
+
+LaTeX Warning: Text page 17 contains only floats.
+
+[17 <./VerjetjeMM1.jpg> <./VerjetjeMM2.jpg> <./VerjetjeMM3.jpg>]
+<Hist1.jpg, id=90, 505.13719pt x 501.37312pt>
 File: Hist1.jpg Graphic file (type jpg)
 <use Hist1.jpg>
-Package pdftex.def Info: Hist1.jpg  used on input line 419.
-(pdftex.def)             Requested size: 151.54233pt x 150.41309pt.
-<Hist2.jpg, id=96, 503.63156pt x 502.87875pt>
+Package pdftex.def Info: Hist1.jpg  used on input line 406.
+(pdftex.def)             Requested size: 282.8749pt x 280.76703pt.
+<Hist2.jpg, id=91, 503.63156pt x 502.87875pt>
 File: Hist2.jpg Graphic file (type jpg)
 <use Hist2.jpg>
-Package pdftex.def Info: Hist2.jpg  used on input line 426.
-(pdftex.def)             Requested size: 151.09062pt x 150.86478pt.
- [19 <./VerjetjeMM4.jpg> <./Hist1.jpg>]
-<Hist3.jpg, id=101, 504.38437pt x 500.62032pt>
+Package pdftex.def Info: Hist2.jpg  used on input line 413.
+(pdftex.def)             Requested size: 251.81516pt x 251.43875pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Hist3.jpg, id=92, 504.38437pt x 500.62032pt>
 File: Hist3.jpg Graphic file (type jpg)
 <use Hist3.jpg>
-Package pdftex.def Info: Hist3.jpg  used on input line 433.
-(pdftex.def)             Requested size: 151.31647pt x 150.18726pt.
-<Scatter3.jpg, id=102, 502.12593pt x 498.36188pt>
+Package pdftex.def Info: Hist3.jpg  used on input line 420.
+(pdftex.def)             Requested size: 252.19156pt x 250.30954pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18 <./Hist1.jpg>]
+
+LaTeX Warning: Text page 19 contains only floats.
+
+
+Overfull \vbox (3.74829pt too high) has occurred while \output is active []
+
+
+[19 <./Hist2.jpg> <./Hist3.jpg>]
+<Scatter3.jpg, id=100, 502.12593pt x 498.36188pt>
 File: Scatter3.jpg Graphic file (type jpg)
 <use Scatter3.jpg>
-Package pdftex.def Info: Scatter3.jpg  used on input line 446.
+Package pdftex.def Info: Scatter3.jpg  used on input line 435.
 (pdftex.def)             Requested size: 200.84682pt x 199.34122pt.
- [20 <./Hist2.jpg> <./Hist3.jpg>] [21 <./Scatter3.jpg>] [22]
-Overfull \hbox (3.13234pt too wide) in paragraph at lines 562--563
+ [20 <./Scatter3.jpg>] [21]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.13234pt too wide) in paragraph at lines 551--551
 \T1/lmr/m/n/10 Kon£no imamo vse, kar po-tre-bu-jemo, da pre-iz-ku-simo mo-del $
 \OML/lmm/m/it/10 A$ \T1/lmr/m/n/10 zno-traj $\OML/lmm/m/it/10 B$\T1/lmr/m/n/10 
 . Skripta
  []
 
-[23]
-<PrimerjavaModelov.jpg, id=120, 639.89063pt x 542.025pt>
+[22]
+<PrimerjavaModelov.jpg, id=111, 639.89063pt x 542.025pt>
 File: PrimerjavaModelov.jpg Graphic file (type jpg)
 <use PrimerjavaModelov.jpg>
-Package pdftex.def Info: PrimerjavaModelov.jpg  used on input line 595.
+Package pdftex.def Info: PrimerjavaModelov.jpg  used on input line 586.
 (pdftex.def)             Requested size: 255.9517pt x 216.80615pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-03.
- (C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+ [23]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+94.
+
+(C:\Users\Uporabnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 []\T1/lmr/m/it/10 Rayleighjeva po-raz-de-li-tev\T1/lmr/m/n/10 , v: Wi-ki-pe-dia
 , Pro-sta en-ci-klo-pe-dija,
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 603--604
+Underfull \hbox (badness 2435) in paragraph at lines 594--595
 \T1/lmr/m/n/10 [ogled 14. 7. 2022], do-sto-pno na $\T1/lmtt/m/n/10 https : / / 
 sl . wikipedia . org / wiki /
  []
 
-[24 <./PrimerjavaModelov.jpg>] [25] (Projektna_naloga.aux) ) 
+[24 <./PrimerjavaModelov.jpg>] (Projektna_naloga.aux) ) 
 Here is how much of TeX's memory you used:
- 21792 strings out of 477992
- 467027 string characters out of 2825578
- 812047 words of memory out of 3000000
- 40162 multiletter control sequences out of 15000+600000
+ 21766 strings out of 477992
+ 466501 string characters out of 2825578
+ 812961 words of memory out of 3000000
+ 40136 multiletter control sequences out of 15000+600000
  555801 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,89p,1089b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Uporabnik
-/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik
-/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Upora
-bnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/U
-porabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/U
-porabnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Use
-rs/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:
-/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
-><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.
-pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lme
-x10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmmi10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmmi6.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmmi9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Uporabnik/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Uporabnik/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabn
-ik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/Upor
-abnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/
-Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on Projektna_naloga.pdf (25 pages, 1607619 bytes).
+{C:/Users/Uporabnik/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Uporabnik/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Uporabnik/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Uporab
+nik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Uporab
+nik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Up
+orabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/User
+s/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/
+Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><
+C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.p
+fb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi
+10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmmi12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmmi5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmmi6.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmmi7.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmmi9.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr10.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/lm/lmr12.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmr17.pfb><C:/Users/Uporabnik/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Uporabnik/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Uporabnik/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Uporabnik/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Uporabnik/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Uporabnik/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/Uporabnik/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Uporabnik/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Uporabnik/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Uporabnik/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/Uporabnik
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Upora
+bnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on Projektna_naloga.pdf (24 pages, 1316910 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
+ 236 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
